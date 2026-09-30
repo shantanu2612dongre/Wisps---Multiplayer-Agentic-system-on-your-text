@@ -107,8 +107,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       {
         rel: "icon",
-        type: "image/png",
-        href: "/mascotbrowsertab.png?v=3",
+        type: "image/x-icon",
+        href: "/mascot-favicon.ico",
       },
       {
         rel: "icon",
@@ -156,8 +156,8 @@ function RootShell({ children }: { children: ReactNode }) {
   document.querySelectorAll("link[rel*='icon']").forEach(function(el){ el.parentNode.removeChild(el); });
   var link = document.createElement('link');
   link.rel = 'icon';
-  link.type = 'image/png';
-  link.href = '/mascotbrowsertab.png?v=' + ts;
+  link.type = 'image/x-icon';
+  link.href = '/mascot-favicon.ico?v=' + ts;
   document.head.appendChild(link);
 })();`,
           }}
