@@ -107,8 +107,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       {
         rel: "icon",
-        type: "image/svg+xml",
-        href: "/wisps-logo.svg",
+        type: "image/png",
+        href: "/wispsmascot.png?v=2",
       },
       {
         rel: "icon",

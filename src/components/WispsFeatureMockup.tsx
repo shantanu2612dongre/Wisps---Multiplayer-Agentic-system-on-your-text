@@ -531,7 +531,7 @@ function AnimatedChatScreen({ active, title, pill, conversation, suggestions, ti
       <div className="wfm-chat-header">
         <span className="wfm-back">‹</span>
         <div className="wfm-avatar">
-          <img src="/wisps-logo.svg" alt="wisps" />
+          <img src="/wispsmascot.png" alt="wisps" />
         </div>
         <div className="wfm-headertext">
           <span className="name">wisps</span>

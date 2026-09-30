@@ -479,7 +479,7 @@ function LoginPage() {
               custom={0}
               className="flex items-center gap-2 text-foreground"
             >
-              <img src="/wisps-logo.svg" alt="Wisps logo" className="h-9 w-9 object-contain" />
+              <img src="/wispsmascot.png" alt="Wisps logo" className="h-9 w-9 object-contain" />
               <span className="text-lg font-semibold tracking-tight">Wisps</span>
             </motion.a>
           </div>
@@ -542,7 +542,7 @@ function LoginPage() {
           custom={0}
           className="flex items-center gap-2 text-foreground lg:hidden mb-10"
         >
-          <img src="/wisps-logo.svg" alt="Wisps logo" className="h-9 w-9 object-contain" />
+          <img src="/wispsmascot.png" alt="Wisps logo" className="h-9 w-9 object-contain" />
           <span className="text-xl font-semibold tracking-tight">Wisps</span>
         </motion.a>
 
@@ -550,7 +550,7 @@ function LoginPage() {
           {/* Header */}
           <motion.div variants={fadeUp} initial="hidden" animate="show" custom={0}>
             <div className="mb-6 hidden lg:block">
-              <img src="/wisps-logo.svg" alt="Wisps logo" className="h-10 w-10 object-contain" />
+              <img src="/wispsmascot.png" alt="Wisps logo" className="h-10 w-10 object-contain" />
             </div>
             <h2 className="text-[28px] font-semibold tracking-tight text-foreground">
               {isOtpStep ? "Check your text bud!" : "Welcome back."}

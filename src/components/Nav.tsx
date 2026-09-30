@@ -19,7 +19,7 @@ export function Nav() {
             href="/"
             className="flex items-center gap-2.5 font-black text-foreground tracking-tight text-3xl lg:text-[2.25rem]"
           >
-            <img src="/wisps-logo.svg" alt="Wisps logo" className="h-10 w-10 lg:h-12 lg:w-12 object-contain" />
+            <img src="/wispsmascot.png" alt="Wisps logo" className="h-10 w-10 lg:h-12 lg:w-12 object-contain" />
             Wisps
           </a>
 

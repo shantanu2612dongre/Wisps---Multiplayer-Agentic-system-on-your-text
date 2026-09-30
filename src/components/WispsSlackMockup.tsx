@@ -18,7 +18,7 @@ import React, { useEffect, useRef, useState } from "react";
  * ------------------------------------------------------------------
  */
 
-const DEFAULT_LOGO_SRC = "/wisps-logo.svg";
+const DEFAULT_LOGO_SRC = "/wispsmascot.png";
 
 const CONVERSATION = [
   {

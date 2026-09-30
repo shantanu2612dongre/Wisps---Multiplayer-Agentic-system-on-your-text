@@ -433,7 +433,7 @@ function CTA() {
         >
           <div className="flex items-center gap-3 px-4 py-2.5 border-b border-border/60 text-xs">
             <span className="inline-flex items-center gap-1.5 font-semibold text-foreground">
-              <img src="/wisps-logo.svg" alt="Wisps logo" className="h-3.5 w-3.5 object-contain" />
+              <img src="/wispsmascot.png" alt="Wisps logo" className="h-3.5 w-3.5 object-contain" />
               Wisps Inbox
             </span>
             <div className="ml-2 flex-1 rounded-md bg-muted/60 px-2.5 py-1 text-muted-foreground">
