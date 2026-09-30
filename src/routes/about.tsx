@@ -33,7 +33,7 @@ const fadeUp = {
 
 function Hero() {
   return (
-    <section className="relative py-12 md:py-16">
+    <section className="relative pt-32 pb-12 md:pt-40 md:pb-16">
       <div className="relative max-w-4xl mx-auto px-6 text-center">
         <motion.h1
           variants={fadeUp}

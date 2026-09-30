@@ -172,3 +172,12 @@
   background-color: var(--color-background);
   background-image: none;
 }
+
+/* Mascot: blend white bg into the page — invisible on light backgrounds */
+img[src*="wispsmascot"] {
+  mix-blend-mode: multiply;
+}
+
+.dark img[src*="wispsmascot"] {
+  mix-blend-mode: normal;
+}

@@ -1578,6 +1578,25 @@ function Features() {
   return (
     <section id="features" className="relative py-28 bg-textured-paper">
       <div className="max-w-7xl mx-auto px-6">
+        {/* Centered section heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7 }}
+          className="text-center mb-16"
+        >
+          <h2
+            className="text-3xl md:text-4xl font-medium tracking-tight text-foreground"
+            style={{ fontFamily: "'Playfair Display', serif" }}
+          >
+            Meet your mini wisps.
+          </h2>
+          <p className="mt-3 text-base text-muted-foreground leading-relaxed">
+            A team of agents that thinks ahead.
+          </p>
+        </motion.div>
+
         <div
           className="grid md:grid-cols-12 gap-12 lg:gap-16 items-stretch"
           onMouseEnter={() => setIsPaused(true)}
@@ -1585,21 +1604,6 @@ function Features() {
         >
           {/* Left side - Title and Feature list */}
           <div className="md:col-span-5 flex flex-col h-full justify-start py-2">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.7 }}
-              className="mb-6"
-            >
-              <h2
-                className="text-3xl md:text-4xl font-medium tracking-tight text-foreground"
-                style={{ fontFamily: "'Playfair Display', serif" }}
-              >
-                Agent that thinks ahead.
-              </h2>
-            </motion.div>
-
             <div className="flex flex-col">
               {features.map((f, i) => {
                 const isActive = activeFeature === i;

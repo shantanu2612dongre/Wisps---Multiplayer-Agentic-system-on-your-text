@@ -12,6 +12,7 @@ import {
   Workflow,
 } from "lucide-react";
 import { Footer } from "../components/Footer";
+import { Nav } from "../components/Nav";
 
 export const Route = createFileRoute("/blog")({
   head: () => ({
@@ -40,54 +41,7 @@ const fadeUp = {
   }),
 };
 
-function Nav() {
-  return (
-    <motion.header
-      initial={{ opacity: 0, y: -10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="sticky top-0 z-50 backdrop-blur-md bg-background/80 border-b border-border/60"
-    >
-      <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a
-          href="/"
-          className="flex items-center gap-1.5 font-semibold text-foreground tracking-tight text-xl"
-        >
-          <img src="/wispsmascot.png" alt="Wisps logo" className="h-9 w-9 object-contain" />
-          Wisps
-        </a>
-        <div className="hidden md:flex items-center gap-10 text-sm text-foreground/80">
-          <a href="/#pricing" className="hover:text-foreground transition-colors">
-            Pricing
-          </a>
-          <a href="/enterprise" className="hover:text-foreground transition-colors">
-            Enterprise
-          </a>
-          <a href="/for-agents" className="hover:text-foreground transition-colors">
-            For Agents
-          </a>
-          <a href="/about" className="hover:text-foreground transition-colors">
-            About
-          </a>
-        </div>
-        <div className="flex items-center gap-5">
-          <a
-            href="#"
-            className="text-sm text-foreground/80 hover:text-foreground transition-colors"
-          >
-            Login
-          </a>
-          <a
-            href={`sms:${import.meta.env.VITE_LINQ_NUMBER || "+13127195463"}?body=Hi`}
-            className="inline-flex items-center rounded-lg bg-foreground text-background px-4 py-2 text-sm font-medium hover:opacity-90 transition-opacity"
-          >
-            Get Started
-          </a>
-        </div>
-      </nav>
-    </motion.header>
-  );
-}
+
 
 function SectionShell({ children }: { children: ReactNode }) {
   return <section className="max-w-7xl mx-auto px-6">{children}</section>;

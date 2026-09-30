@@ -19,7 +19,7 @@ export function Nav() {
           <div className="flex items-center">
             <a
               href="/login"
-              className="text-[15px] font-medium text-foreground hover:opacity-80 transition-opacity bg-white/40 dark:bg-black/20 hover:bg-white/60 px-5 py-2.5 rounded-full backdrop-blur-md"
+              className="text-[15px] font-medium text-foreground hover:opacity-80 transition-opacity bg-white/40 dark:bg-black/20 hover:bg-white/60 px-5 py-2.5 rounded-full backdrop-blur-md border border-black/10 dark:border-white/10"
             >
               Login
             </a>
@@ -40,7 +40,7 @@ export function Nav() {
           <div className="ml-auto flex items-center">
             <a
               href={`sms:${import.meta.env.VITE_LINQ_NUMBER || "+13127195463"}?body=Hi`}
-              className="inline-flex items-center gap-2.5 rounded-full bg-white/40 dark:bg-black/20 hover:bg-white/60 text-foreground backdrop-blur-md px-7 py-3 text-[16px] font-medium transition-all cursor-pointer shadow-sm hover:scale-105"
+              className="inline-flex items-center gap-2.5 rounded-full bg-white/40 dark:bg-black/20 hover:bg-white/60 text-foreground backdrop-blur-md px-7 py-3 text-[16px] font-medium transition-all cursor-pointer shadow-sm hover:scale-105 border border-black/10 dark:border-white/10"
             >
               <div className="bg-white rounded-full p-0.5 shadow-sm">
                 <img src="/imessage.svg" className="w-5 h-5 object-contain" alt="iMessage" />
