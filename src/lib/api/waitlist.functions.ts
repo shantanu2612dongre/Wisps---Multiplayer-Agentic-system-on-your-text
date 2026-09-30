@@ -123,7 +123,7 @@ export const sendWaitlistOtp = createServerFn({ method: "POST" })
           </p>
           <hr style="border: none; border-top: 1px solid #e4e4e7; margin: 32px 0 16px;" />
           <p style="font-size: 12px; color: #9f9ea6; text-align: center; margin: 0;">
-            Wisps — Cursor for your professional life, inside iMessage.
+            Wisps Cursor for your professional life, inside iMessage.
           </p>
         </div>
       `,

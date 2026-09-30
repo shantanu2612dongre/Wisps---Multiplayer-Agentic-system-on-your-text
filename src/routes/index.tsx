@@ -49,7 +49,7 @@ const WaitlistContext = createContext<{ openWaitlist: (location?: string) => voi
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Wisps — Cursor for your professional life, inside iMessage." },
+      { title: "Wisps • Cursor for your professional life, inside iMessage" },
       {
         name: "description",
         content:
