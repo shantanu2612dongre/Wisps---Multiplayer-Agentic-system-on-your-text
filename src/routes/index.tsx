@@ -81,9 +81,11 @@ function Hero() {
     <section className="relative overflow-hidden min-h-[100dvh] lg:min-h-[85vh] 2xl:min-h-0 2xl:aspect-[16/9] flex items-center justify-center py-24 z-0 bg-textured-paper">
       {/* Background Image */}
       <div
-        className="absolute inset-0 -z-10 bg-cover bg-top bg-no-repeat opacity-100 brightness-[1.1] contrast-[1.05] saturate-[1.15] transition-all duration-300"
+        className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/herobackground.png')", maskImage: "linear-gradient(to bottom, black 0%, black 60%, rgba(0,0,0,0.85) 75%, rgba(0,0,0,0.5) 88%, rgba(0,0,0,0.15) 96%, transparent 100%)", WebkitMaskImage: "linear-gradient(to bottom, black 0%, black 60%, rgba(0,0,0,0.85) 75%, rgba(0,0,0,0.5) 88%, rgba(0,0,0,0.15) 96%, transparent 100%)",
+          backgroundImage: "url('/hero_mesh_gradient.jpg')",
+          maskImage: "linear-gradient(to bottom, black 0%, black 55%, rgba(0,0,0,0.7) 75%, rgba(0,0,0,0.2) 90%, transparent 100%)",
+          WebkitMaskImage: "linear-gradient(to bottom, black 0%, black 55%, rgba(0,0,0,0.7) 75%, rgba(0,0,0,0.2) 90%, transparent 100%)",
         }}
       />
 

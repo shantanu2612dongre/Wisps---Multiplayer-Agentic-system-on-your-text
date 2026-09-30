@@ -108,29 +108,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         rel: "icon",
         type: "image/png",
-        href: "/wispsmascot.png?v=2",
-      },
-      {
-        rel: "icon",
-        type: "image/x-icon",
-        href: "/favicon.ico",
+        href: "/wispsmascot.png?v=4",
       },
       {
         rel: "apple-touch-icon",
         sizes: "180x180",
-        href: "/apple-touch-icon.png",
-      },
-      {
-        rel: "icon",
-        type: "image/png",
-        sizes: "192x192",
-        href: "/android-chrome-192x192.png",
-      },
-      {
-        rel: "icon",
-        type: "image/png",
-        sizes: "512x512",
-        href: "/android-chrome-512x512.png",
+        href: "/wispsmascot.png?v=4",
       },
       {
         rel: "manifest",
