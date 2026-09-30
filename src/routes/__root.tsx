@@ -148,6 +148,20 @@ function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
+        {/* Force favicon via JS — bypasses browser favicon cache completely */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){
+  var ts = new Date().getTime();
+  document.querySelectorAll("link[rel*='icon']").forEach(function(el){ el.parentNode.removeChild(el); });
+  var link = document.createElement('link');
+  link.rel = 'icon';
+  link.type = 'image/png';
+  link.href = '/mascotbrowsertab.png?v=' + ts;
+  document.head.appendChild(link);
+})();`,
+          }}
+        />
         {/* Google tag (gtag.js) */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-W3NQZWVRKV"></script>
         <script
