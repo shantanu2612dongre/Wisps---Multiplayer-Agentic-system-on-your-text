@@ -49,7 +49,7 @@ const WaitlistContext = createContext<{ openWaitlist: (location?: string) => voi
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Wisps — The Copilot for Your Professional Relationships" },
+      { title: "Wisps — Cursor for your professional life, inside iMessage." },
       {
         name: "description",
         content:
@@ -102,7 +102,7 @@ function Hero() {
             // Fixed Headline Size
             className="tracking-tighter text-foreground leading-[1.05] text-[64px]"
           >
-            The copilot for your professional relationships.
+            Cursor for your professional life, inside iMessage.
           </motion.h1>
 
           <motion.p
@@ -143,7 +143,8 @@ function Hero() {
         >
           {/* Removed scale hack, fluid width is now handled by components themselves */}
           <div className="flex flex-col items-center w-full origin-center">
-            <div className="flex items-center p-0.5 mb-2 rounded-full bg-white/70 border border-white/60 dark:bg-black/40 dark:border-white/10 shadow-md backdrop-blur-md z-20 relative translate-y-6 lg:translate-y-12">
+            {/* iMessage / Slack toggle — temporarily hidden */}
+            {/* <div className="flex items-center p-0.5 mb-2 rounded-full bg-white/70 border border-white/60 dark:bg-black/40 dark:border-white/10 shadow-md backdrop-blur-md z-20 relative translate-y-6 lg:translate-y-12">
               <button
                 onClick={() => setActiveMockup('imessage')}
                 className={`flex items-center gap-1.5 px-[clamp(0.75rem,1vw,1rem)] py-[clamp(0.35rem,0.5vw,0.5rem)] rounded-full text-[clamp(0.7rem,0.75vw,0.8rem)] font-medium transition-all ${activeMockup === 'imessage'
@@ -164,14 +165,11 @@ function Hero() {
                 <img src="/slack.svg" className="w-[14px] h-[14px] object-contain" alt="Slack" />
                 Slack
               </button>
-            </div>
+            </div> */}
 
             <div className="relative w-full flex justify-center z-10">
-              {activeMockup === 'imessage' ? (
-                <WispsMockup />
-              ) : (
-                <WispsSlackMockup />
-              )}
+              <WispsMockup />
+              {/* activeMockup === 'imessage' ? <WispsMockup /> : <WispsSlackMockup /> */}
             </div>
           </div>
         </motion.div>

@@ -173,6 +173,21 @@ export function Footer() {
                     Blog
                   </a>
                 </li>
+                <li>
+                  <a href="/#pricing" className="hover:text-foreground transition-colors">
+                    Pricing
+                  </a>
+                </li>
+                <li>
+                  <a href="/enterprise" className="hover:text-foreground transition-colors">
+                    Enterprise
+                  </a>
+                </li>
+                <li>
+                  <a href="/for-agents" className="hover:text-foreground transition-colors">
+                    For Agents
+                  </a>
+                </li>
               </ul>
             </div>
 
