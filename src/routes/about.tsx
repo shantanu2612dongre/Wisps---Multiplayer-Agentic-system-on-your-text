@@ -6,13 +6,13 @@ import { Nav } from "../components/Nav";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Wisps — Reimagining Email for the AI Era" },
+      { title: "About Dotie — Reimagining Email for the AI Era" },
       {
         name: "description",
         content:
           "We're building the future of email — an intelligent inbox that learns your tone and handles the busywork.",
       },
-      { property: "og:title", content: "About Wisps — Reimagining Email for the AI Era" },
+      { property: "og:title", content: "About Dotie — Reimagining Email for the AI Era" },
       {
         property: "og:description",
         content: "An AI inbox that learns your tone and handles the busywork.",
@@ -58,7 +58,7 @@ const manifestoPoints = [
   {
     title: "Human-first AI",
     description:
-      "AI should amplify your capabilities, not replace your judgment. Wisps learns from you but always lets you stay in control.",
+      "AI should amplify your capabilities, not replace your judgment. Dotie learns from you but always lets you stay in control.",
   },
   {
     title: "Privacy is non-negotiable",
@@ -68,17 +68,17 @@ const manifestoPoints = [
   {
     title: "Speed matters",
     description:
-      "The best tools feel instant. We've built Wisps on a blazing-fast client that opens, scrolls, and searches without delay.",
+      "The best tools feel instant. We've built Dotie on a blazing-fast client that opens, scrolls, and searches without delay.",
   },
   {
     title: "Delight in details",
     description:
-      "Great software feels magical. We obsess over micro-interactions, animations, and the small moments that make using Wisps enjoyable.",
+      "Great software feels magical. We obsess over micro-interactions, animations, and the small moments that make using Dotie enjoyable.",
   },
   {
     title: "Built for teams",
     description:
-      "Email is a team sport. Wisps works seamlessly across organizations, with shared workflows and consistent experiences.",
+      "Email is a team sport. Dotie works seamlessly across organizations, with shared workflows and consistent experiences.",
   },
 ];
 

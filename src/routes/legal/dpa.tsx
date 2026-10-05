@@ -7,12 +7,12 @@ import { Nav } from "../../components/Nav";
 export const Route = createFileRoute("/legal/dpa")({
   head: () => ({
     meta: [
-      { title: "Data Processing Agreement — Wisps" },
+      { title: "Data Processing Agreement — Dotie" },
       {
         name: "description",
-        content: "Data Processing Agreement for Wisps and Slashy, effective February 3, 2026.",
+        content: "Data Processing Agreement for Dotie and Slashy, effective February 3, 2026.",
       },
-      { property: "og:title", content: "Data Processing Agreement — Wisps" },
+      { property: "og:title", content: "Data Processing Agreement — Dotie" },
       {
         property: "og:description",
         content:

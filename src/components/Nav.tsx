@@ -32,11 +32,11 @@ export function Nav() {
               className="flex items-center gap-2.5 font-black text-foreground tracking-tight text-3xl lg:text-[2.25rem]"
             >
               <img src="/wispsmascot.png" alt="Wisps logo" className="h-10 w-10 lg:h-12 lg:w-12 object-contain" />
-              Wisps
+              Dotie
             </a>
           </div>
 
-          {/* Right: Text Wisps */}
+          {/* Right: Text Dotie */}
           <div className="ml-auto flex items-center">
             <a
               href={`sms:${import.meta.env.VITE_LINQ_NUMBER || "+13127195463"}?body=Hi`}
@@ -45,7 +45,7 @@ export function Nav() {
               <div className="bg-white rounded-full p-0.5 shadow-sm">
                 <img src="/imessage.svg" className="w-5 h-5 object-contain" alt="iMessage" />
               </div>
-              Text Wisps
+              Text Dotie
             </a>
           </div>
         </nav>

@@ -18,17 +18,17 @@ import { Nav } from "../components/Nav";
 export const Route = createFileRoute("/privacy")({
   head: () => ({
     meta: [
-      { title: "Privacy Policy — Wisps" },
+      { title: "Privacy Policy — Dotie" },
       {
         name: "description",
         content:
-          "Privacy Policy for Wisps, including what we collect, how we use it, how we share it, and your rights.",
+          "Privacy Policy for Dotie, including what we collect, how we use it, how we share it, and your rights.",
       },
-      { property: "og:title", content: "Privacy Policy — Wisps" },
+      { property: "og:title", content: "Privacy Policy — Dotie" },
       {
         property: "og:description",
         content:
-          "Privacy Policy for Wisps with India as the base jurisdiction and worldwide data handling disclosures.",
+          "Privacy Policy for Dotie with India as the base jurisdiction and worldwide data handling disclosures.",
       },
     ],
   }),
@@ -109,8 +109,8 @@ function PrivacyPage() {
             <div className="space-y-10">
               <div className="space-y-4 text-sm md:text-base leading-7 text-foreground/85">
                 <p>
-                  Wisps is the product operated by Slashy. This Privacy Policy explains how we
-                  collect, use, disclose, and protect personal data when you use Wisps, our
+                  Dotie is the product operated by Slashy. This Privacy Policy explains how we
+                  collect, use, disclose, and protect personal data when you use Dotie, our
                   website, and related services (together, the &quot;Service&quot;).
                 </p>
                 <p>
@@ -178,10 +178,10 @@ function PrivacyPage() {
                 <p>
                   For questions, requests, or complaints, contact our privacy team at{" "}
                   <a
-                    href="mailto:privacy@usewisps.com"
+                    href="mailto:privacy@usedotie.com"
                     className="font-medium text-foreground hover:underline underline-offset-4"
                   >
-                    privacy@usewisps.com
+                    privacy@usedotie.com
                   </a>
                   .
                 </p>
@@ -214,7 +214,7 @@ function PrivacyPage() {
 
               <Section number="5" title="AI, Memories, and Model Data" icon={Bot}>
                 <p>
-                  Wisps may store AI memories, conversation history, and related contextual data
+                  Dotie may store AI memories, conversation history, and related contextual data
                   when you use features that rely on them. We keep that data encrypted and only as
                   needed to provide the feature or as otherwise required by law.
                 </p>
@@ -287,10 +287,10 @@ function PrivacyPage() {
                 <p>
                   If you have a grievance about our handling of personal data, email{" "}
                   <a
-                    href="mailto:privacy@usewisps.com"
+                    href="mailto:privacy@usedotie.com"
                     className="font-medium text-foreground hover:underline underline-offset-4"
                   >
-                    privacy@usewisps.com
+                    privacy@usedotie.com
                   </a>
                   . We will acknowledge and review the request within a reasonable time and, where
                   appropriate, route it to the correct internal owner.
@@ -298,10 +298,10 @@ function PrivacyPage() {
                 <p>
                   You can exercise rights by contacting us at{" "}
                   <a
-                    href="mailto:privacy@usewisps.com"
+                    href="mailto:privacy@usedotie.com"
                     className="font-medium text-foreground hover:underline underline-offset-4"
                   >
-                    privacy@usewisps.com
+                    privacy@usedotie.com
                   </a>
                   .
                 </p>
@@ -344,10 +344,10 @@ function PrivacyPage() {
                 <p>
                   Questions about this Policy can be sent to{" "}
                   <a
-                    href="mailto:privacy@usewisps.com"
+                    href="mailto:privacy@usedotie.com"
                     className="font-medium text-foreground hover:underline underline-offset-4"
                   >
-                    privacy@usewisps.com
+                    privacy@usedotie.com
                   </a>
                   .
                 </p>

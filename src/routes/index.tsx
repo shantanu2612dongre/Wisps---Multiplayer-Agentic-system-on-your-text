@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, useEffect, createContext, useContext } from "react";
-import WispsMockup from "../components/WispsMockup";
-import WispsSlackMockup from "../components/WispsSlackMockup";
-import WispsFeatureMockup from "../components/WispsFeatureMockup";
+import DotieMockup from "../components/DotieMockup";
+import DotieSlackMockup from "../components/DotieSlackMockup";
+import DotieFeatureMockup from "../components/DotieFeatureMockup";
 import { motion } from "motion/react";
 import {
   Inbox,
@@ -49,13 +49,13 @@ const WaitlistContext = createContext<{ openWaitlist: (location?: string) => voi
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Wisps • Cursor for your professional life, inside iMessage" },
+      { title: "Dotie • Cursor for your professional life, inside iMessage" },
       {
         name: "description",
         content:
-          "Wisps learns how you write, drafts your replies, and handles the busywork — so you can focus on what matters.",
+          "Dotie learns how you write, drafts your replies, and handles the busywork — so you can focus on what matters.",
       },
-      { property: "og:title", content: "Wisps — The Copilot for Your Professional Relationships" },
+      { property: "og:title", content: "Dotie — The Copilot for Your Professional Relationships" },
       {
         property: "og:description",
         content: "An AI inbox that learns your tone and handles the busywork.",
@@ -115,7 +115,7 @@ function Hero() {
             // Fluid Paragraph Size
             className="mt-[clamp(1rem,2vw,1.5rem)] max-w-xl font-medium text-foreground/80 leading-relaxed text-[clamp(1rem,1.2vw+0.25rem,1.25rem)]"
           >
-            Wisps learns how you write, drafts your replies, and handles the busywork, so you can focus on what matters.
+            Dotie learns how you write, drafts your replies, and handles the busywork, so you can focus on what matters.
           </motion.p>
 
           <motion.div
@@ -170,8 +170,8 @@ function Hero() {
             </div> */}
 
             <div className="relative w-full flex justify-center z-10">
-              <WispsMockup />
-              {/* activeMockup === 'imessage' ? <WispsMockup /> : <WispsSlackMockup /> */}
+              <DotieMockup />
+              {/* activeMockup === 'imessage' ? <DotieMockup /> : <DotieSlackMockup /> */}
             </div>
           </div>
         </motion.div>
@@ -191,13 +191,13 @@ const heroThreads = [
     tag: "Important",
     body: [
       "Hi team,",
-      "I've been following Wisps and love what you are building. We have an active developer base that uses automated agents, and we'd love to partner to enable Wisps's email tools for them.",
+      "I've been following Dotie and love what you are building. We have an active developer base that uses automated agents, and we'd love to partner to enable Dotie's email tools for them.",
       "Let me know if you have time for a quick intro call next week to discuss details.",
     ],
     chatPrompt: "Draft an enthusiastic acceptance reply proposing Wednesday at 3 PM PST",
     draftLines: [
       "Hi Tuấn,",
-      "Thanks for reaching out! This sounds like a great fit. Wisps's MCP native integration makes it super easy for developer agents to query and write emails.",
+      "Thanks for reaching out! This sounds like a great fit. Dotie's MCP native integration makes it super easy for developer agents to query and write emails.",
       "Let's jump on a quick call next week. Would Wednesday at 3 PM PST work for you?",
     ],
   },
@@ -217,7 +217,7 @@ const heroThreads = [
     chatPrompt: "Draft a concise reply asking for the benchmark report PDF",
     draftLines: [
       "Hi Neil,",
-      "Thanks for reaching out! We're actively optimizing Wisps for agent readability, so I'd love to check out the benchmark report.",
+      "Thanks for reaching out! We're actively optimizing Dotie for agent readability, so I'd love to check out the benchmark report.",
       "Please send over the PDF whenever you have a chance.",
     ],
   },
@@ -238,10 +238,10 @@ const heroThreads = [
 function InboxMockup() {
   const [selectedId, setSelectedId] = useState("tuan");
   const [chatInput, setChatInput] = useState("");
-  const [messages, setMessages] = useState<Array<{ sender: "user" | "wisps"; text: string }>>([
+  const [messages, setMessages] = useState<Array<{ sender: "user" | "dotie"; text: string }>>([
     {
-      sender: "wisps",
-      text: "I'm wisps, your email copilot. Ask me to draft a reply, schedule calls, or summarize threads!",
+      sender: "dotie",
+      text: "I'm dotie, your email copilot. Ask me to draft a reply, schedule calls, or summarize threads!",
     },
   ]);
   const [isGenerating, setIsGenerating] = useState(false);
@@ -266,8 +266,8 @@ function InboxMockup() {
         setChatInput("");
         setMessages([
           {
-            sender: "wisps",
-            text: "I'm Wisps, your email copilot. Ask me to draft a reply, schedule calls, or summarize threads!",
+            sender: "dotie",
+            text: "I'm Dotie, your email copilot. Ask me to draft a reply, schedule calls, or summarize threads!",
           },
         ]);
         setCursorState({ x: 38, y: 15, clicking: false, opacity: 0 });
@@ -295,13 +295,13 @@ function InboxMockup() {
         setVisibleDraftLines([]);
         setMessages([
           {
-            sender: "wisps",
+            sender: "dotie",
             text: "Viewing thread from Neil Patel. What would you like me to draft?",
           },
         ]);
         await sleep(800);
 
-        // Step 3: Cursor glides to Wisps Copilot Chat Input at bottom right
+        // Step 3: Cursor glides to Dotie Copilot Chat Input at bottom right
         if (cancelled) return;
         setCursorState({ x: 86, y: 92, clicking: false, opacity: 1 });
         await sleep(800);
@@ -330,7 +330,7 @@ function InboxMockup() {
         setMessages((prev) => [
           ...prev,
           { sender: "user", text: targetPrompt },
-          { sender: "wisps", text: "Drafting response using Tone Memory..." },
+          { sender: "dotie", text: "Drafting response using Tone Memory..." },
         ]);
         setIsGenerating(true);
 
@@ -342,7 +342,7 @@ function InboxMockup() {
         setIsGenerating(false);
         setMessages((prev) => [
           ...prev.slice(0, -1),
-          { sender: "wisps", text: "Draft generated and placed in your reply editor below!" },
+          { sender: "dotie", text: "Draft generated and placed in your reply editor below!" },
         ]);
 
         // Step 6: Type draft lines into view inside email pane
@@ -535,12 +535,12 @@ function InboxMockup() {
                 ))}
               </div>
 
-              {/* Wisps AI Draft Section */}
+              {/* Dotie AI Draft Section */}
               <div className="mt-auto rounded-xl border border-border/70 p-3.5 bg-card relative overflow-hidden shadow-sm">
                 <div className="flex items-center justify-between mb-2.5">
                   <div className="flex items-center gap-1.5 text-xs font-semibold text-foreground">
                     <Sparkles className="h-3.5 w-3.5 text-foreground" />
-                    <span>Drafted by Wisps</span>
+                    <span>Drafted by Dotie</span>
                     <span className="text-[10px] font-normal text-muted-foreground">
                       (Tone Memory)
                     </span>
@@ -564,7 +564,7 @@ function InboxMockup() {
                     </div>
                   ) : (
                     <p className="text-muted-foreground font-sans not-italic text-[11px]">
-                      Use the Wisps Copilot sidebar on the right to prompt a response...
+                      Use the Dotie Copilot sidebar on the right to prompt a response...
                     </p>
                   )}
                 </div>
@@ -585,7 +585,7 @@ function InboxMockup() {
               </div>
             </section>
 
-            {/* Pane 4: Right Wisps AI Copilot Chat Sidebar */}
+            {/* Pane 4: Right Dotie AI Copilot Chat Sidebar */}
             <section className="hidden lg:flex flex-col w-72 shrink-0 bg-card border-l border-border/60 p-4 justify-between text-left">
               <div>
                 <div className="flex items-center justify-between pb-3 border-b border-border/60 mb-3">
@@ -593,7 +593,7 @@ function InboxMockup() {
                     <div className="w-6 h-6 rounded-lg bg-foreground text-background flex items-center justify-center">
                       <Sparkles className="h-3.5 w-3.5" />
                     </div>
-                    <span className="text-xs font-bold text-foreground tracking-tight">Wisps</span>
+                    <span className="text-xs font-bold text-foreground tracking-tight">Dotie</span>
                   </div>
                   <span className="text-[9px] px-1.5 py-0.5 rounded bg-muted text-muted-foreground font-mono">
                     AI Active
@@ -625,7 +625,7 @@ function InboxMockup() {
                     type="text"
                     readOnly
                     value={chatInput}
-                    placeholder="Ask Wisps to draft or reply..."
+                    placeholder="Ask Dotie to draft or reply..."
                     className="w-full bg-transparent text-xs text-foreground placeholder:text-muted-foreground focus:outline-none px-1"
                   />
                   <button
@@ -729,12 +729,12 @@ const features = [
   {
     icon: Sparkles,
     title: "Tone Memory",
-    desc: "Wisps studies the way you write and proposes replies that actually sound like you.",
+    desc: "Dotie studies the way you write and proposes replies that actually sound like you.",
   },
   {
     icon: Inbox,
     title: "One brain, every tool",
-    desc: "LinkedIn, Email, and Slack\nWisps remembers every conversation across all of them, so you never explain context twice.",
+    desc: "LinkedIn, Email, and Slack\nDotie remembers every conversation across all of them, so you never explain context twice.",
   },
   {
     icon: Search,
@@ -744,7 +744,7 @@ const features = [
   {
     icon: Shield,
     title: "Smart follow-ups",
-    desc: "Wisps tracks every relationship — and resurfaces the ones that need you, right when they matter, with a draft ready to go.",
+    desc: "Dotie tracks every relationship — and resurfaces the ones that need you, right when they matter, with a draft ready to go.",
   },
 ];
 
@@ -1201,7 +1201,7 @@ function AutoOrganizedInboxAnimation() {
               className={`h-1.5 w-1.5 rounded-full ${isCompleted ? "bg-emerald-500" : "bg-primary-glow animate-pulse"
                 }`}
             />
-            <span>{isCompleted ? "Inbox One brain, every tool" : "Wisps AI Auto-Labeling..."}</span>
+            <span>{isCompleted ? "Inbox One brain, every tool" : "Dotie AI Auto-Labeling..."}</span>
           </motion.div>
         </div>
 
@@ -1440,7 +1440,7 @@ function AskYourInboxAnimation() {
             <div className="rounded-xl border border-pink-wash/40 bg-gradient-to-br from-pink-wash/15 via-background to-lavender-wash/10 p-3.5 shadow-sm text-left">
               <div className="text-[11px] font-semibold text-foreground mb-1.5 flex items-center gap-1.5">
                 <span className="h-1.5 w-1.5 rounded-full bg-foreground" />
-                <span>Wisps AI Answer</span>
+                <span>Dotie AI Answer</span>
               </div>
               <p className="text-xs text-foreground leading-relaxed font-medium">
                 {currentDemo.answer}
@@ -1590,7 +1590,7 @@ function Features() {
             className="text-3xl md:text-4xl font-medium tracking-tight text-foreground"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            Meet your mini wisps.
+            Meet your mini dotie.
           </h2>
           <p className="mt-3 text-base text-muted-foreground leading-relaxed">
             A team of agents that thinks ahead.
@@ -1644,7 +1644,7 @@ function Features() {
 
             {/* Animated Inner Content (Phone Mockup) */}
             <div className="relative z-10 w-full h-full p-6 md:p-8 flex items-center justify-center">
-              <WispsFeatureMockup activeIndex={activeFeature} />
+              <DotieFeatureMockup activeIndex={activeFeature} />
             </div>
           </div>
         </div>
@@ -1703,14 +1703,14 @@ function OrbitalAnimation() {
 
   return (
     <div className="relative w-full h-full flex items-center justify-center">
-      {/* Central Wisps text */}
+      {/* Central Dotie text */}
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ duration: 0.5 }}
         className="relative z-10 bg-card border border-border rounded-full px-6 py-3 shadow-lg"
       >
-        <span className="text-lg font-semibold tracking-tight text-foreground">Wisps</span>
+        <span className="text-lg font-semibold tracking-tight text-foreground">Dotie</span>
       </motion.div>
 
       {/* Orbiting apps */}
@@ -2191,14 +2191,14 @@ function RelationshipCopilot() {
     {
       icon: Ghost,
       title: "See who's ignoring you",
-      desc: "Wisps tracks response patterns and flags who owes you a reply — and for how long.",
+      desc: "Dotie tracks response patterns and flags who owes you a reply — and for how long.",
       animation: <GhostTrackerAnimation />,
       size: "normal" as const,
     },
     {
       icon: Timer,
       title: "Smart follow-ups",
-      desc: "Wisps tracks every relationship — and resurfaces the ones that need you, right when they matter, with a draft ready to go.",
+      desc: "Dotie tracks every relationship — and resurfaces the ones that need you, right when they matter, with a draft ready to go.",
       animation: <SmartFollowUpAnimation />,
       size: "normal" as const,
       bgImage: "/feature-card-1.jpeg",
@@ -2219,7 +2219,7 @@ function RelationshipCopilot() {
             Future of networking .
           </h2>
           <p className="mt-4 text-muted-foreground text-lg">
-            Wisps helps you store the important details you don't want to forget:
+            Dotie helps you store the important details you don't want to forget:
           </p>
         </motion.div>
 
@@ -2311,7 +2311,7 @@ function DataControl() {
           transition={{ duration: 0.7, delay: 0.1 }}
           className="mt-6 text-[15px] text-muted-foreground text-center max-w-xl mx-auto leading-relaxed font-medium"
         >
-          Wisps reads your email, calendar, and messages to do its job. It's encrypted, it's never sold, it's never used to train AI, and you can delete it whenever you want.
+          Dotie reads your email, calendar, and messages to do its job. It's encrypted, it's never sold, it's never used to train AI, and you can delete it whenever you want.
         </motion.p>
 
         <div className="mt-20 grid md:grid-cols-3 gap-8 md:gap-0 relative">
@@ -2370,7 +2370,7 @@ function Pricing() {
       price: "$0",
       interval: "",
       annualNote: "",
-      features: ["1 workspace", "5 active workflows", "Community support", "Wisps AI starter"],
+      features: ["1 workspace", "5 active workflows", "Community support", "Dotie AI starter"],
       cta: "Start free",
       featured: false,
       styles: {
@@ -2547,7 +2547,7 @@ function CTA() {
             Tell your agent what you need
           </h2>
           <p className="mt-6 text-[17px] leading-relaxed text-muted-foreground max-w-2xl mx-auto font-sans">
-            Ask Wisps to draft a reply, find context, schedule a meeting, or follow up. It handles the work across your inbox.
+            Ask Dotie to draft a reply, find context, schedule a meeting, or follow up. It handles the work across your inbox.
           </p>
           <div className="mt-10 flex items-center justify-center gap-4">
             <a
@@ -2590,6 +2590,7 @@ function Index() {
         <Hero />
         {/* <Logos /> */}
         <Features />
+        <AgentCards />
         <DataControl />
         {/* <RelationshipCopilot /> */}
         {/* Spacer to fill up the space previously occupied by RelationshipCopilot */}
@@ -2603,5 +2604,152 @@ function Index() {
   );
 }
 
-// Export the context so Nav can use it too
+// ── Agent Cards Section ─────────────────────────────────────────────────────
+const agents = [
+  {
+    handle: "@goomi",
+    title: "Deep Research Agent",
+    description: "> Scanning 10,000 pages for market trends...",
+    description2: "> Synthesising key insights into a briefing...",
+    img: "/dotiemascot1.png",
+    // swap: "/dotie-goomi.png" when you have the thinking expression
+    cardBg: "bg-[#EEF3FF]",
+    pillBg: "bg-[#4F6EF7]",
+    glowColor: "hover:shadow-[0_8px_40px_rgba(79,110,247,0.25)]",
+    accentColor: "#4F6EF7",
+    link: "#",
+  },
+  {
+    handle: "@scout",
+    title: "Email & Outreach Agent",
+    description: "> Drafting 50 personalised outreach emails...",
+    description2: "> Scheduling follow-ups across 3 time zones...",
+    img: "/dotiemascot1.png",
+    // swap: "/dotie-scout.png" when you have the sunglasses expression
+    cardBg: "bg-[#FFF4EB]",
+    pillBg: "bg-[#F97316]",
+    glowColor: "hover:shadow-[0_8px_40px_rgba(249,115,22,0.25)]",
+    accentColor: "#F97316",
+    link: "#",
+  },
+  {
+    handle: "@spark",
+    title: "Creative & Design Agent",
+    description: "> Generating 12 subject line variations...",
+    description2: "> Producing on-brand copy with your tone...",
+    img: "/dotiemascot1.png",
+    // swap: "/dotie-spark.png" when you have the sparkle expression
+    cardBg: "bg-[#FDFBE8]",
+    pillBg: "bg-[#EAB308]",
+    glowColor: "hover:shadow-[0_8px_40px_rgba(234,179,8,0.25)]",
+    accentColor: "#EAB308",
+    link: "#",
+  },
+  {
+    handle: "@care",
+    title: "Customer Support Agent",
+    description: "> Triaging 34 support threads by priority...",
+    description2: "> Drafting warm, accurate replies instantly...",
+    img: "/dotiemascot1.png",
+    // swap: "/dotie-care.png" when you have the hearts expression
+    cardBg: "bg-[#FFF0F5]",
+    pillBg: "bg-[#EC4899]",
+    glowColor: "hover:shadow-[0_8px_40px_rgba(236,72,153,0.25)]",
+    accentColor: "#EC4899",
+    link: "#",
+  },
+];
+
+function AgentCards() {
+  return (
+    <section className="relative py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Section heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="text-center mb-16"
+        >
+          <h2
+            className="text-3xl md:text-4xl font-medium tracking-tight text-foreground"
+            style={{ fontFamily: "'Playfair Display', serif" }}
+          >
+            Your agents, ready to deploy.
+          </h2>
+          <p className="mt-3 text-base text-muted-foreground">
+            Each dotie is a specialist. Assign them. Watch them work.
+          </p>
+        </motion.div>
+
+        {/* Cards grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {agents.map((agent, i) => (
+            <motion.div
+              key={agent.handle}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1, duration: 0.6 }}
+              className={`relative rounded-2xl ${agent.cardBg} border border-black/5 p-6 flex flex-col items-center text-center
+                transition-all duration-300 cursor-pointer
+                hover:-translate-y-2 hover:scale-[1.02]
+                ${agent.glowColor}
+                `}
+            >
+              {/* Pop-out avatar */}
+              <div className="relative -mt-14 mb-4">
+                <div
+                  className="w-28 h-28 rounded-full flex items-center justify-center"
+                  style={{ background: `${agent.accentColor}18` }}
+                >
+                  <img
+                    src={agent.img}
+                    alt={agent.handle}
+                    className="w-24 h-24 object-contain drop-shadow-lg"
+                    style={{ mixBlendMode: "multiply" }}
+                  />
+                </div>
+              </div>
+
+              {/* Handle pill */}
+              <span
+                className={`${agent.pillBg} text-white text-xs font-bold px-3 py-1 rounded-full mb-3 tracking-wide`}
+              >
+                {agent.handle}
+              </span>
+
+              {/* Title */}
+              <h3 className="text-[15px] font-semibold text-foreground mb-4 tracking-tight">
+                {agent.title}
+              </h3>
+
+              {/* Terminal block */}
+              <div className="w-full bg-[#0f1117] rounded-lg px-4 py-3 text-left mb-5 flex-1">
+                <p className="text-[11px] font-mono text-emerald-400 leading-relaxed">
+                  {agent.description}
+                </p>
+                <p className="text-[11px] font-mono text-emerald-400/60 leading-relaxed mt-1">
+                  {agent.description2}
+                </p>
+              </div>
+
+              {/* Deploy CTA */}
+              <a
+                href={agent.link}
+                className="text-[13px] font-medium transition-opacity hover:opacity-70"
+                style={{ color: agent.accentColor }}
+              >
+                Deploy {agent.handle} →
+              </a>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
 export { WaitlistContext };

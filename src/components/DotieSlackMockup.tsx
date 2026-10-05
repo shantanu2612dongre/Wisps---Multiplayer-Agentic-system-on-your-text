@@ -1,20 +1,20 @@
 import React, { useEffect, useRef, useState } from "react";
 
 /**
- * WispsSlackMockup
+ * DotieSlackMockup
  * ------------------------------------------------------------------
- * Animated Slack desktop-window mockup for the wisps site. Shows a
- * team channel where people ask wisps for a relationship summary
+ * Animated Slack desktop-window mockup for the dotie site. Shows a
+ * team channel where people ask dotie for a relationship summary
  * and it answers / drafts / confirms sends. Messages reveal one at
- * a time with a "Wisps is typing…" beat before each bot reply, then
+ * a time with a "Dotie is typing…" beat before each bot reply, then
  * the conversation resets and loops.
  *
  * Drop-in usage:
- *   <WispsSlackMockup />
+ *   <DotieSlackMockup />
  *
- * Uses the same wisps-logo.png asset as the iMessage mockup —
+ * Uses the same dotie-logo.png asset as the iMessage mockup —
  * point logoSrc elsewhere if needed:
- *   <WispsSlackMockup logoSrc="/some-other-logo.png" />
+ *   <DotieSlackMockup logoSrc="/some-other-logo.png" />
  * ------------------------------------------------------------------
  */
 
@@ -25,7 +25,7 @@ const CONVERSATION = [
     from: "user",
     name: "Aisha",
     avatar: "aisha",
-    text: "hey wisps, catch me up on Marcus before I call him",
+    text: "hey dotie, catch me up on Marcus before I call him",
   },
   {
     from: "bot",
@@ -105,15 +105,15 @@ const TIMING = [
 const HOLD_AFTER_LAST = 3200;
 const RESET_PAUSE = 800;
 
-const CHANNELS = ["pilots", "deals", "support", "all-wisps", "social"];
-const ACTIVE_CHANNEL = "all-wisps";
+const CHANNELS = ["pilots", "deals", "support", "all-dotie", "social"];
+const ACTIVE_CHANNEL = "all-dotie";
 const DMS = [
-  { name: "Wisps", online: true },
+  { name: "Dotie", online: true },
   { name: "Priya", online: true },
   { name: "Aisha", online: false },
 ];
 
-export default function WispsSlackMockup({ logoSrc }: { logoSrc?: string }) {
+export default function DotieSlackMockup({ logoSrc }: { logoSrc?: string }) {
   const [visibleCount, setVisibleCount] = useState(0);
   const [typing, setTyping] = useState(false);
   const timers = useRef<NodeJS.Timeout[]>([]);
@@ -400,13 +400,13 @@ export default function WispsSlackMockup({ logoSrc }: { logoSrc?: string }) {
             <span className="wslack-dot wslack-dot--y" />
             <span className="wslack-dot wslack-dot--g" />
           </div>
-          <span className="wslack-titletext">Slack · Wisps</span>
+          <span className="wslack-titletext">Slack · Dotie</span>
         </div>
 
         <div className="wslack-body">
           <div className="wslack-sidebar">
             <div className="wslack-workspace">
-              Wisps <span className="wslack-caret">▾</span>
+              Dotie <span className="wslack-caret">▾</span>
             </div>
 
             <div className="wslack-section">Channels</div>
@@ -439,7 +439,7 @@ export default function WispsSlackMockup({ logoSrc }: { logoSrc?: string }) {
                 <div className="wslack-msg" key={i}>
                   {m.from === "bot" ? (
                     <div className="wslack-avatar wslack-avatar--bot">
-                      <img src={logoSrc || DEFAULT_LOGO_SRC} alt="wisps" />
+                      <img src={logoSrc || DEFAULT_LOGO_SRC} alt="dotie" />
                     </div>
                   ) : (
                     <div className="wslack-avatar wslack-avatar--photo">
@@ -448,7 +448,7 @@ export default function WispsSlackMockup({ logoSrc }: { logoSrc?: string }) {
                   )}
                   <div className="wslack-msg-body">
                     <div className="wslack-msg-head">
-                      <span className="wslack-msg-name">{m.from === "bot" ? "Wisps" : m.name}</span>
+                      <span className="wslack-msg-name">{m.from === "bot" ? "Dotie" : m.name}</span>
                       {m.from === "bot" && <span className="wslack-badge">APP</span>}
                       <span className="wslack-msg-time">3:5{i} PM</span>
                     </div>
@@ -464,7 +464,7 @@ export default function WispsSlackMockup({ logoSrc }: { logoSrc?: string }) {
               ))}
             </div>
 
-            <div className="wslack-typing">{typing ? "Wisps is typing…" : ""}</div>
+            <div className="wslack-typing">{typing ? "Dotie is typing…" : ""}</div>
             <div className="wslack-composer">Message #{ACTIVE_CHANNEL}</div>
           </div>
         </div>

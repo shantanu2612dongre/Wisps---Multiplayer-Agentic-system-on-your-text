@@ -314,7 +314,7 @@ function AnimatedCardItem({ card, onComplete }: { card: CardData; onComplete: ()
               <Sparkles className="h-2.5 w-2.5" />
             </div>
             <span className="text-[11px] font-semibold bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent">
-              Wisps AI
+              Dotie AI
             </span>
             {step === "PROCESSING" && (
               <span className="ml-auto flex items-center gap-1 text-[11px] text-muted-foreground/70 font-medium">

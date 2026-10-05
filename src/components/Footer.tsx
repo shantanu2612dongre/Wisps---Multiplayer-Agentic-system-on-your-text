@@ -4,10 +4,10 @@ import { ThemeToggle } from "./ThemeToggle";
 export function Footer() {
   return (
     <footer className="relative border-t border-border/60 bg-textured-paper pt-20 pb-10 overflow-hidden">
-      {/* Background Wordmark "wisps" */}
+      {/* Background Wordmark "dotie" */}
       <div className="absolute bottom-[-2.5rem] md:bottom-[-4rem] left-1/2 -translate-x-1/2 w-full max-w-7xl px-6 pointer-events-none select-none z-0">
         <h2 className="text-[9rem] sm:text-[12rem] md:text-[18rem] lg:text-[22rem] font-bold text-center tracking-tighter text-foreground/[0.03] dark:text-foreground/[0.02] leading-none uppercase">
-          wisps
+          dotie
         </h2>
       </div>
 
@@ -20,7 +20,7 @@ export function Footer() {
               className="flex items-center gap-1.5 font-semibold text-foreground tracking-tight text-xl"
             >
               <img src="/wispsmascot.png" alt="Wisps logo" className="h-9 w-9 object-contain" />
-              Wisps
+              Dotie
             </a>
 
             <p className="text-sm text-muted-foreground leading-relaxed max-w-sm">
@@ -63,56 +63,56 @@ export function Footer() {
             <div className="flex flex-col gap-2.5 text-sm text-muted-foreground mt-2">
               <h4 className="text-sm font-semibold text-foreground tracking-tight">Socials</h4>
               <a
-                href="https://linkedin.com/company/wisps"
+                href="https://linkedin.com/company/dotie"
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center gap-2.5 hover:text-foreground transition-colors"
               >
                 <Linkedin className="h-4 w-4 shrink-0" />
-                <span>@wisps-email</span>
+                <span>@dotie-email</span>
               </a>
               <a
-                href="https://x.com/wisps"
+                href="https://x.com/dotie"
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center gap-2.5 hover:text-foreground transition-colors"
               >
                 <Twitter className="h-4 w-4 shrink-0" />
-                <span>@usewisps</span>
+                <span>@usedotie</span>
               </a>
               <a
-                href="https://instagram.com/wisps"
+                href="https://instagram.com/dotie"
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center gap-2.5 hover:text-foreground transition-colors"
               >
                 <Instagram className="h-4 w-4 shrink-0" />
-                <span>@usewisps</span>
+                <span>@usedotie</span>
               </a>
               <a
-                href="https://youtube.com/wisps"
+                href="https://youtube.com/dotie"
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center gap-2.5 hover:text-foreground transition-colors"
               >
                 <Youtube className="h-4 w-4 shrink-0" />
-                <span>@usewisps</span>
+                <span>@usedotie</span>
               </a>
               <a
-                href="https://facebook.com/wisps"
+                href="https://facebook.com/dotie"
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center gap-2.5 hover:text-foreground transition-colors"
               >
                 <Facebook className="h-4 w-4 shrink-0" />
-                <span>Wisps</span>
+                <span>Dotie</span>
               </a>
               <a
-                href="mailto:contact@usewisps.com"
+                href="mailto:contact@usedotie.com"
                 className="flex items-center gap-2.5 hover:text-foreground transition-colors"
               >
                 <Mail className="h-4 w-4 shrink-0" />
-                <span>contact@usewisps.com</span>
+                <span>contact@usedotie.com</span>
               </a>
             </div>
           </div>
@@ -233,7 +233,7 @@ export function Footer() {
         {/* Lower footer bar */}
         <div className="border-t border-border/60 pt-8 flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-muted-foreground relative z-10">
           <div className="flex flex-col sm:flex-row items-center gap-6">
-            <div>© {new Date().getFullYear()} Wisps. All rights reserved.</div>
+            <div>© {new Date().getFullYear()} Dotie. All rights reserved.</div>
             <ThemeToggle />
           </div>
           <div className="flex items-center gap-6">

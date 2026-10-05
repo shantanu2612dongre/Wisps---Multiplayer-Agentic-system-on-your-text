@@ -20,11 +20,11 @@ import {
 export const Route = createFileRoute("/login")({
   head: () => ({
     meta: [
-      { title: "Login — Wisps" },
+      { title: "Login — Dotie" },
       {
         name: "description",
         content:
-          "Sign in to Wisps — the AI-native inbox that learns how you write and handles the busywork.",
+          "Sign in to Dotie — the AI-native inbox that learns how you write and handles the busywork.",
       },
     ],
   }),
@@ -480,7 +480,7 @@ function LoginPage() {
               className="flex items-center gap-2 text-foreground"
             >
               <img src="/wispsmascot.png" alt="Wisps logo" className="h-9 w-9 object-contain" />
-              <span className="text-lg font-semibold tracking-tight">Wisps</span>
+              <span className="text-lg font-semibold tracking-tight">Dotie</span>
             </motion.a>
           </div>
 
@@ -493,7 +493,7 @@ function LoginPage() {
               custom={1}
               className="text-4xl xl:text-[2.75rem] font-semibold tracking-tight text-foreground leading-[1.08]"
             >
-              Your first Wisps
+              Your first Dotie
               <br />
               moment
             </motion.h1>
@@ -505,7 +505,7 @@ function LoginPage() {
               custom={2}
               className="mt-4 text-[15px] text-muted-foreground leading-relaxed max-w-sm"
             >
-              Sign in and let Wisps learn how you write — it'll draft replies, sort your inbox, and
+              Sign in and let Dotie learn how you write — it'll draft replies, sort your inbox, and
               handle the busywork for you.
             </motion.p>
 
@@ -543,7 +543,7 @@ function LoginPage() {
           className="flex items-center gap-2 text-foreground lg:hidden mb-10"
         >
           <img src="/wispsmascot.png" alt="Wisps logo" className="h-9 w-9 object-contain" />
-          <span className="text-xl font-semibold tracking-tight">Wisps</span>
+          <span className="text-xl font-semibold tracking-tight">Dotie</span>
         </motion.a>
 
         <div className="w-full max-w-[400px]">
@@ -558,7 +558,7 @@ function LoginPage() {
             <p className="mt-2.5 text-[15px] text-muted-foreground/80 leading-relaxed max-w-[90%]">
               {isOtpStep 
                 ? "Enter the 6 digit code we sent you" 
-                : "Log in with the phone number or email you texted Wisps with."}
+                : "Log in with the phone number or email you texted Dotie with."}
             </p>
           </motion.div>
 

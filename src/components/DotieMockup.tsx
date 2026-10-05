@@ -1,33 +1,33 @@
 import React, { useEffect, useRef, useState } from "react";
 
 /**
- * WispsMockup
+ * DotieMockup
  * ------------------------------------------------------------------
- * Animated iPhone / iMessage mockup for the wisps hero section.
+ * Animated iPhone / iMessage mockup for the dotie hero section.
  * Messages reveal one at a time, with a typing indicator before
- * each "wisps" reply, then the conversation resets and loops.
+ * each "dotie" reply, then the conversation resets and loops.
  *
  * Drop-in usage:
- *   <WispsMockup />
+ *   <DotieMockup />
  *
- * Ships with the real wisps mark baked in as a default (assumes
- * wisps-logo.png sits in /public — copy the file we generated
+ * Ships with the real dotie mark baked in as a default (assumes
+ * dotie-logo.png sits in /public — copy the file we generated
  * alongside this component there). Override per-instance if needed:
- *   <WispsMockup logoSrc="/some-other-logo.png" />
+ *   <DotieMockup logoSrc="/some-other-logo.png" />
  * ------------------------------------------------------------------
  */
 
 const DEFAULT_LOGO_SRC = "/wispsmascot.png";
 
 const CONVERSATION = [
-  { from: "user", text: "hey wisps, what's pending with Mark from dev team" },
+  { from: "user", text: "hey dotie, what's pending with Mark from dev team" },
   {
-    from: "wisps",
+    from: "dotie",
     text: "hey — last he confirmed the PR is merged, now waiting on your approval",
   },
   { from: "user", text: "did he say anything about the deploy timeline" },
   {
-    from: "wisps",
+    from: "dotie",
     text: "yeah, thursday morning if you approve today. want me to draft a reply?",
   },
 ];
@@ -46,17 +46,17 @@ const RESET_PAUSE = 700;
 
 function TypingBubble() {
   return (
-    <div className="wisps-bubble wisps-bubble--wisps wisps-typing">
-      <span className="wisps-dot" />
-      <span className="wisps-dot" />
-      <span className="wisps-dot" />
+    <div className="dotie-bubble dotie-bubble--dotie dotie-typing">
+      <span className="dotie-dot" />
+      <span className="dotie-dot" />
+      <span className="dotie-dot" />
     </div>
   );
 }
 
-export default function WispsMockup({ logoSrc }: { logoSrc?: string }) {
+export default function DotieMockup({ logoSrc }: { logoSrc?: string }) {
   const [visibleCount, setVisibleCount] = useState(0);
-  const [typingFrom, setTypingFrom] = useState<string | null>(null); // 'wisps' | null
+  const [typingFrom, setTypingFrom] = useState<string | null>(null); // 'dotie' | null
   const timers = useRef<NodeJS.Timeout[]>([]);
 
   useEffect(() => {
@@ -104,30 +104,30 @@ export default function WispsMockup({ logoSrc }: { logoSrc?: string }) {
   }, []);
 
   return (
-    <div className="wisps-stage">
+    <div className="dotie-stage">
       <style>{`
-        .wisps-stage {
+        .dotie-stage {
           position: relative;
           display: flex;
           align-items: center;
           justify-content: center;
           padding: 40px 20px;
         }
-        .wisps-glow {
+        .dotie-glow {
           position: absolute;
           width: 480px;
           height: 480px;
           border-radius: 50%;
           background: radial-gradient(circle, rgba(139,143,255,0.35) 0%, rgba(139,143,255,0) 70%);
           filter: blur(10px);
-          animation: wisps-breathe 5s ease-in-out infinite;
+          animation: dotie-breathe 5s ease-in-out infinite;
           z-index: 0;
         }
-        @keyframes wisps-breathe {
+        @keyframes dotie-breathe {
           0%, 100% { transform: scale(1); opacity: 0.7; }
           50% { transform: scale(1.08); opacity: 1; }
         }
-        .wisps-phone {
+        .dotie-phone {
           position: relative;
           z-index: 1;
           width: clamp(240px, 22vw, 340px);
@@ -143,35 +143,35 @@ export default function WispsMockup({ logoSrc }: { logoSrc?: string }) {
             inset 0 -2px 4px rgba(0,0,0,0.6),
             0 30px 60px -20px rgba(20, 20, 40, 0.5);
         }
-        .wisps-btn {
+        .dotie-btn {
           position: absolute;
           background: linear-gradient(90deg, #dcdde2 0%, #6c6d73 35%, #1b1b1d 100%);
           box-shadow:
             inset 0 1px 1px rgba(255,255,255,0.5),
             inset 0 -1px 1px rgba(0,0,0,0.5);
         }
-        .wisps-btn--action {
+        .dotie-btn--action {
           left: -5px;
           top: 15%;
           width: 5px;
           height: 22px;
           border-radius: 3px 0 0 3px;
         }
-        .wisps-btn--vol-up {
+        .dotie-btn--vol-up {
           left: -5px;
           top: 25%;
           width: 5px;
           height: 46px;
           border-radius: 3px 0 0 3px;
         }
-        .wisps-btn--vol-down {
+        .dotie-btn--vol-down {
           left: -5px;
           top: 34.5%;
           width: 5px;
           height: 46px;
           border-radius: 3px 0 0 3px;
         }
-        .wisps-btn--power {
+        .dotie-btn--power {
           right: -5px;
           top: 27%;
           width: 5px;
@@ -179,7 +179,7 @@ export default function WispsMockup({ logoSrc }: { logoSrc?: string }) {
           background: linear-gradient(270deg, #dcdde2 0%, #6c6d73 35%, #1b1b1d 100%);
           border-radius: 0 3px 3px 0;
         }
-        .wisps-screen {
+        .dotie-screen {
           position: relative;
           width: 100%;
           height: 100%;
@@ -191,7 +191,7 @@ export default function WispsMockup({ logoSrc }: { logoSrc?: string }) {
           font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
           box-shadow: inset 0 0 0 1px rgba(0,0,0,0.06);
         }
-        .wisps-island {
+        .dotie-island {
           position: absolute;
           top: 10px;
           left: 50%;
@@ -206,14 +206,14 @@ export default function WispsMockup({ logoSrc }: { logoSrc?: string }) {
           justify-content: flex-end;
           padding-right: 8px;
         }
-        .wisps-island-cam {
+        .dotie-island-cam {
           width: 8px;
           height: 8px;
           border-radius: 50%;
           background: radial-gradient(circle at 35% 35%, #3d4a6b, #0a0a0c 70%);
           box-shadow: 0 0 0 1px rgba(255,255,255,0.06);
         }
-        .wisps-statusbar {
+        .dotie-statusbar {
           display: flex;
           align-items: center;
           justify-content: space-between;
@@ -222,12 +222,12 @@ export default function WispsMockup({ logoSrc }: { logoSrc?: string }) {
           font-weight: 600;
           color: #0b0b0d;
         }
-        .wisps-statusbar .wisps-icons {
+        .dotie-statusbar .dotie-icons {
           display: flex;
           align-items: center;
           gap: 4px;
         }
-        .wisps-header {
+        .dotie-header {
           position: relative;
           display: flex;
           flex-direction: column;
@@ -236,7 +236,7 @@ export default function WispsMockup({ logoSrc }: { logoSrc?: string }) {
           padding: 6px 44px 12px;
           border-bottom: 1px solid rgba(0,0,0,0.06);
         }
-        .wisps-back {
+        .dotie-back {
           position: absolute;
           left: 14px;
           top: 6px;
@@ -252,7 +252,7 @@ export default function WispsMockup({ logoSrc }: { logoSrc?: string }) {
           font-size: 17px;
           line-height: 1;
         }
-        .wisps-avatar {
+        .dotie-avatar {
           width: 46px;
           height: 46px;
           border-radius: 50%;
@@ -263,33 +263,33 @@ export default function WispsMockup({ logoSrc }: { logoSrc?: string }) {
           flex-shrink: 0;
           overflow: hidden;
         }
-        .wisps-avatar img {
+        .dotie-avatar img {
           width: 66%;
           height: 66%;
           object-fit: contain;
         }
-        .wisps-headertext {
+        .dotie-headertext {
           display: flex;
           flex-direction: column;
           align-items: center;
           line-height: 1.2;
         }
-        .wisps-headertext .name {
+        .dotie-headertext .name {
           font-size: 13px;
           font-weight: 600;
           color: #0b0b0d;
         }
-        .wisps-headertext .chevron {
+        .dotie-headertext .chevron {
           font-size: 9px;
           color: #9a9aa0;
         }
-        .wisps-video {
+        .dotie-video {
           position: absolute;
           right: 14px;
           top: 10px;
           color: #007aff;
         }
-        .wisps-chat {
+        .dotie-chat {
           flex: 1;
           padding: 14px 12px 10px;
           display: flex;
@@ -297,56 +297,56 @@ export default function WispsMockup({ logoSrc }: { logoSrc?: string }) {
           gap: 6px;
           overflow: hidden;
         }
-        .wisps-bubble {
+        .dotie-bubble {
           max-width: 78%;
           padding: 9px 13px;
           border-radius: 18px;
           font-size: 13.5px;
           line-height: 1.35;
-          animation: wisps-rise 0.32s ease-out;
+          animation: dotie-rise 0.32s ease-out;
         }
-        @keyframes wisps-rise {
+        @keyframes dotie-rise {
           from { opacity: 0; transform: translateY(8px) scale(0.98); }
           to { opacity: 1; transform: translateY(0) scale(1); }
         }
-        .wisps-bubble--user {
+        .dotie-bubble--user {
           align-self: flex-end;
           background: #007aff;
           color: #fff;
           border-bottom-right-radius: 5px;
         }
-        .wisps-bubble--wisps {
+        .dotie-bubble--dotie {
           align-self: flex-start;
           background: #e9e9eb;
           color: #0b0b0d;
           border-bottom-left-radius: 5px;
         }
-        .wisps-typing {
+        .dotie-typing {
           display: flex;
           gap: 4px;
           align-items: center;
           padding: 11px 14px;
         }
-        .wisps-dot {
+        .dotie-dot {
           width: 6px;
           height: 6px;
           border-radius: 50%;
           background: #9a9aa0;
-          animation: wisps-bounce 1.1s infinite ease-in-out;
+          animation: dotie-bounce 1.1s infinite ease-in-out;
         }
-        .wisps-dot:nth-child(2) { animation-delay: 0.15s; }
-        .wisps-dot:nth-child(3) { animation-delay: 0.3s; }
-        @keyframes wisps-bounce {
+        .dotie-dot:nth-child(2) { animation-delay: 0.15s; }
+        .dotie-dot:nth-child(3) { animation-delay: 0.3s; }
+        @keyframes dotie-bounce {
           0%, 60%, 100% { transform: translateY(0); opacity: 0.5; }
           30% { transform: translateY(-3px); opacity: 1; }
         }
-        .wisps-inputbar {
+        .dotie-inputbar {
           display: flex;
           align-items: center;
           gap: 8px;
           padding: 8px 12px 16px;
         }
-        .wisps-inputpill {
+        .dotie-inputpill {
           flex: 1;
           height: 30px;
           border-radius: 16px;
@@ -359,62 +359,62 @@ export default function WispsMockup({ logoSrc }: { logoSrc?: string }) {
           color: #9a9aa0;
         }
         @media (prefers-reduced-motion: reduce) {
-          .wisps-glow, .wisps-bubble, .wisps-dot {
+          .dotie-glow, .dotie-bubble, .dotie-dot {
             animation: none !important;
           }
         }
       `}</style>
 
-      <div className="wisps-glow" />
+      <div className="dotie-glow" />
 
-      <div className="wisps-phone">
-        <div className="wisps-btn wisps-btn--action" />
-        <div className="wisps-btn wisps-btn--vol-up" />
-        <div className="wisps-btn wisps-btn--vol-down" />
-        <div className="wisps-btn wisps-btn--power" />
-        <div className="wisps-screen">
-          <div className="wisps-island">
-            <div className="wisps-island-cam" />
+      <div className="dotie-phone">
+        <div className="dotie-btn dotie-btn--action" />
+        <div className="dotie-btn dotie-btn--vol-up" />
+        <div className="dotie-btn dotie-btn--vol-down" />
+        <div className="dotie-btn dotie-btn--power" />
+        <div className="dotie-screen">
+          <div className="dotie-island">
+            <div className="dotie-island-cam" />
           </div>
 
-          <div className="wisps-statusbar">
+          <div className="dotie-statusbar">
             <span>9:41</span>
-            <span className="wisps-icons">
+            <span className="dotie-icons">
               <svg width="16" height="11" viewBox="0 0 16 11" fill="currentColor"><rect x="0" y="7" width="3" height="4" rx="0.5"/><rect x="4.5" y="5" width="3" height="6" rx="0.5"/><rect x="9" y="3" width="3" height="8" rx="0.5"/><rect x="13.5" y="0" width="3" height="11" rx="0.5"/></svg>
               <svg width="15" height="11" viewBox="0 0 15 11" fill="currentColor"><path d="M7.5 10.5c.6 0 1-.45 1-1s-.45-1-1-1-1 .45-1 1 .45 1 1 1zM4.3 6.8a4.5 4.5 0 016.4 0l-1 1a3 3 0 00-4.3 0l-1-1zM2 4.5a7.8 7.8 0 0111 0l-1 1a6.3 6.3 0 00-9 0l-1-1z"/></svg>
               <svg width="24" height="11" viewBox="0 0 24 11" fill="none"><rect x="0.5" y="0.5" width="20" height="10" rx="2.5" stroke="currentColor"/><rect x="2" y="2" width="15" height="7" rx="1.2" fill="currentColor"/><rect x="21.5" y="3.5" width="1.5" height="4" rx="0.7" fill="currentColor"/></svg>
             </span>
           </div>
 
-          <div className="wisps-header">
-            <span className="wisps-back">‹</span>
-            <div className="wisps-avatar">
-              <img src={logoSrc || DEFAULT_LOGO_SRC} alt="wisps" />
+          <div className="dotie-header">
+            <span className="dotie-back">‹</span>
+            <div className="dotie-avatar">
+              <img src={logoSrc || DEFAULT_LOGO_SRC} alt="dotie" />
             </div>
-            <div className="wisps-headertext">
-              <span className="name">wisps</span>
+            <div className="dotie-headertext">
+              <span className="name">dotie</span>
               <span className="chevron">›</span>
             </div>
-            <svg className="wisps-video" width="20" height="15" viewBox="0 0 20 15" fill="currentColor">
+            <svg className="dotie-video" width="20" height="15" viewBox="0 0 20 15" fill="currentColor">
               <rect x="0" y="1.5" width="13" height="12" rx="2.5" />
               <path d="M13 5.5l6-3.5v11l-6-3.5z" />
             </svg>
           </div>
 
-          <div className="wisps-chat">
+          <div className="dotie-chat">
             {CONVERSATION.slice(0, visibleCount).map((m, i) => (
               <div
                 key={i}
-                className={`wisps-bubble wisps-bubble--${m.from === "user" ? "user" : "wisps"}`}
+                className={`dotie-bubble dotie-bubble--${m.from === "user" ? "user" : "dotie"}`}
               >
                 {m.text}
               </div>
             ))}
-            {typingFrom === "wisps" && <TypingBubble />}
+            {typingFrom === "dotie" && <TypingBubble />}
           </div>
 
-          <div className="wisps-inputbar">
-            <div className="wisps-inputpill">iMessage</div>
+          <div className="dotie-inputbar">
+            <div className="dotie-inputpill">iMessage</div>
           </div>
         </div>
       </div>

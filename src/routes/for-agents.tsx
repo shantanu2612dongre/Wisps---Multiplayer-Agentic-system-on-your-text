@@ -7,14 +7,14 @@ import { Nav } from "../components/Nav";
 export const Route = createFileRoute("/for-agents")({
   head: () => ({
     meta: [
-      { title: "For Agents — Wisps" },
+      { title: "For Agents — Dotie" },
       {
         name: "description",
         content:
-          "Your inbox, now a tool call. Connect once and use Wisps from Claude, ChatGPT, Cursor, or any agent via MCP.",
+          "Your inbox, now a tool call. Connect once and use Dotie from Claude, ChatGPT, Cursor, or any agent via MCP.",
       },
-      { property: "og:title", content: "Wisps for Agents" },
-      { property: "og:description", content: "Connect once. Use Wisps from any agent." },
+      { property: "og:title", content: "Dotie for Agents" },
+      { property: "og:description", content: "Connect once. Use Dotie from any agent." },
     ],
   }),
   component: ForAgentsPage,
@@ -32,7 +32,7 @@ const fadeUp = {
 function Hero() {
   return (
     <section className="relative overflow-hidden">
-      {/* Soft sunrise wash, echoing the Wisps palette */}
+      {/* Soft sunrise wash, echoing the Dotie palette */}
       <div
         aria-hidden
         className="absolute inset-0 -z-10"
@@ -70,7 +70,7 @@ function Hero() {
           custom={2}
           className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto"
         >
-          Connect once. Use Wisps from Claude, ChatGPT, Cursor — or any agent that speaks MCP.
+          Connect once. Use Dotie from Claude, ChatGPT, Cursor — or any agent that speaks MCP.
         </motion.p>
         <motion.div
           variants={fadeUp}
@@ -133,7 +133,7 @@ function Hero() {
             </div>
             <div className="mt-4 flex items-center gap-2 text-xs text-muted-foreground">
               <Plug className="h-3.5 w-3.5" /> Connected to{" "}
-              <span className="text-foreground font-medium">wisps.inbox</span>
+              <span className="text-foreground font-medium">dotie.inbox</span>
             </div>
           </div>
         </motion.div>
@@ -226,7 +226,7 @@ function Capabilities() {
             One inbox. Every agent.
           </h2>
           <p className="mt-4 text-muted-foreground text-lg">
-            Wisps turns your email into a first-class surface for AI agents — with the safety rails
+            Dotie turns your email into a first-class surface for AI agents — with the safety rails
             to actually let them act.
           </p>
         </motion.div>
@@ -260,7 +260,7 @@ function HowItWorks() {
     {
       n: "01",
       t: "Connect your inbox",
-      d: "Authorize Wisps with Gmail in one click. No mailbox copy, no exports.",
+      d: "Authorize Dotie with Gmail in one click. No mailbox copy, no exports.",
     },
     {
       n: "02",
@@ -318,7 +318,7 @@ function CodeBlock() {
             A tool call, not a SDK.
           </h2>
           <p className="mt-4 text-muted-foreground text-lg leading-relaxed">
-            Wisps speaks MCP out of the box. Point any compliant client at the endpoint and the
+            Dotie speaks MCP out of the box. Point any compliant client at the endpoint and the
             tools show up — typed, documented, ready.
           </p>
           <ul className="mt-6 space-y-3 text-sm text-foreground/90">
@@ -351,8 +351,8 @@ function CodeBlock() {
           <pre className="p-6 text-[13px] leading-relaxed text-white/90 overflow-x-auto">
             {`{
   "mcpServers": {
-    "wisps": {
-      "url": "https://mcp.wisps.inbox/v1",
+    "dotie": {
+      "url": "https://mcp.dotie.inbox/v1",
       "headers": {
         "Authorization": "Bearer sk_live_••••"
       }
@@ -402,7 +402,7 @@ function CTA() {
           custom={1}
           className="mt-5 text-lg md:text-xl text-foreground/70 max-w-xl mx-auto"
         >
-          Let Wisps handle your inbox so you can focus on what matters most.
+          Let Dotie handle your inbox so you can focus on what matters most.
         </motion.p>
         <motion.div
           variants={fadeUp}
@@ -434,7 +434,7 @@ function CTA() {
           <div className="flex items-center gap-3 px-4 py-2.5 border-b border-border/60 text-xs">
             <span className="inline-flex items-center gap-1.5 font-semibold text-foreground">
               <img src="/wispsmascot.png" alt="Wisps logo" className="h-3.5 w-3.5 object-contain" />
-              Wisps Inbox
+              Dotie Inbox
             </span>
             <div className="ml-2 flex-1 rounded-md bg-muted/60 px-2.5 py-1 text-muted-foreground">
               Search
@@ -483,7 +483,7 @@ function CTA() {
                 {
                   who: "Romaine, Re...Jon",
                   tag: "Follow Up",
-                  subj: "Wisps + Anthropic - YC Credits",
+                  subj: "Dotie + Anthropic - YC Credits",
                   time: "3h",
                 },
                 { who: "Arthur, Louis", subj: "Feedback Beta tester", time: "4:50 PM" },

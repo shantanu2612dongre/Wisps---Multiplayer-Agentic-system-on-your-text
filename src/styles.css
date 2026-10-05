@@ -67,7 +67,7 @@
 :root {
   --font-season: "season", "season Fallback", system-ui, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans;
   --radius: 0.625rem;
-  /* Wisps.com-inspired palette: clean white, near-black ink, vibrant gradient accent */
+  /* Dotie.com-inspired palette: clean white, near-black ink, vibrant gradient accent */
   --background: oklch(1 0 0);
   --foreground: oklch(0.18 0.01 260);
   --card: oklch(1 0 0);
@@ -174,10 +174,10 @@
 }
 
 /* Mascot: blend white bg into the page — invisible on light backgrounds */
-img[src*="wispsmascot"] {
+img[src*="dotiemascot"] {
   mix-blend-mode: multiply;
 }
 
-.dark img[src*="wispsmascot"] {
+.dark img[src*="dotiemascot"] {
   mix-blend-mode: normal;
 }

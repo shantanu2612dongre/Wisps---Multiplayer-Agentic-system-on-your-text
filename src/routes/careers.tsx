@@ -7,13 +7,13 @@ import { Nav } from "../components/Nav";
 export const Route = createFileRoute("/careers")({
   head: () => ({
     meta: [
-      { title: "Careers at Wisps — Join Our Team" },
+      { title: "Careers at Dotie — Join Our Team" },
       {
         name: "description",
         content:
           "We're always looking for talented people to join our mission of reimagining email.",
       },
-      { property: "og:title", content: "Careers at Wisps — Join Our Team" },
+      { property: "og:title", content: "Careers at Dotie — Join Our Team" },
       { property: "og:description", content: "Join our team and help build the future of email." },
     ],
   }),
@@ -87,7 +87,7 @@ function Careers() {
             >
               <span className="italic font-normal">Come build</span>
               <span className="font-normal text-4xl md:text-[5rem] text-muted-foreground/80 italic">at</span>
-              <span className="font-normal">Wisps</span>
+              <span className="font-normal">Dotie</span>
             </h1>
           </motion.div>
 
@@ -179,7 +179,7 @@ function Careers() {
                               Fully remote from <Link to="/faq" className="underline cursor-pointer hover:text-foreground transition-colors">eligible countries</Link>
                             </p>
                             <a 
-                              href={`mailto:founders@wisps.in?subject=Application%20for%20${encodeURIComponent(job.role)}`}
+                              href={`mailto:founders@dotie.in?subject=Application%20for%20${encodeURIComponent(job.role)}`}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="h-14 w-[88px] rounded-full bg-[#222222] text-white flex items-center justify-center shrink-0 hover:bg-black transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background"

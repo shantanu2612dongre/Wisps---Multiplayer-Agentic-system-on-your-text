@@ -80,7 +80,7 @@ export function CookieConsent() {
             </div>
             
             <p className="text-sm text-muted-foreground/90 mb-6 leading-relaxed">
-              We use cookies to understand how you interact with Wisps and improve your experience. By accepting, you agree to our use of these cookies. See our <a href="/privacy" className="underline hover:text-foreground">Privacy Policy</a>.
+              We use cookies to understand how you interact with Dotie and improve your experience. By accepting, you agree to our use of these cookies. See our <a href="/privacy" className="underline hover:text-foreground">Privacy Policy</a>.
             </p>
 
             <div className="flex gap-3">

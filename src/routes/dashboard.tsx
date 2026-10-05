@@ -50,7 +50,7 @@ function DashboardPage() {
       <header className="fixed top-0 left-0 right-0 h-16 bg-white/80 backdrop-blur-md border-b border-black/[0.04] z-50 px-4 sm:px-8 flex items-center justify-between">
         <div className="flex items-center gap-2">
           {/* Logo */}
-          <span className="text-xl font-bold tracking-tight text-black">Wisps</span>
+          <span className="text-xl font-bold tracking-tight text-black">Dotie</span>
         </div>
         
         <div className="flex items-center gap-4 relative">
@@ -117,12 +117,12 @@ function DashboardPage() {
             
             <h2 className="text-xl font-semibold text-black mb-1.5">Invite friends</h2>
             <p className="text-[14px] text-gray-600 mb-6 leading-relaxed">
-              For every person you gift Wisps, you get a free week of Wisps as well.
+              For every person you gift Dotie, you get a free week of Dotie as well.
             </p>
             
             <div className="flex items-center justify-between bg-[#fafafa] border border-black/10 rounded-full p-1.5 pl-4 mb-6">
               <span className="text-[13px] text-black font-medium truncate pr-4">
-                https://wisps.ai/invite?referral=6rd1ffco2Z...
+                https://dotie.ai/invite?referral=6rd1ffco2Z...
               </span>
               <button className="flex items-center gap-1.5 px-4 py-2 bg-white border border-black/10 rounded-full text-[13px] font-medium text-black hover:bg-gray-50 transition-colors shadow-sm shrink-0">
                 <Copy className="w-3.5 h-3.5" />
@@ -131,7 +131,7 @@ function DashboardPage() {
             </div>
             
             <p className="text-[12px] text-gray-500 leading-relaxed">
-              Your friend gets a free week. Tell them to open the link and text Wisps to start. This referral code only works for people new to Wisps.
+              Your friend gets a free week. Tell them to open the link and text Dotie to start. This referral code only works for people new to Dotie.
             </p>
           </div>
         </div>
@@ -221,7 +221,7 @@ function DashboardChat() {
           </button>
           <input 
             type="text" 
-            placeholder="Message Wisps..." 
+            placeholder="Message Dotie..." 
             className="flex-1 bg-transparent border-none outline-none px-3 text-[15px] text-black font-medium placeholder:text-gray-400 w-full min-w-0"
           />
         </div>
@@ -337,12 +337,12 @@ function Field({ label, icon: Icon, value, onChange, disabled, type = "text" }: 
 // -------------------------------------------------------------
 function getIntegrationIcon(name: string) {
   switch (name) {
-    case "Gmail": return <img src="/wispsgmaillogo.png" alt="Gmail" className="w-6 h-6 object-contain" />;
-    case "Outlook": return <img src="/wispsoutlook.png" alt="Outlook" className="w-6 h-6 object-contain" />;
-    case "Google Calendar": return <img src="/wispscalendarlogo.png" alt="Google Calendar" className="w-6 h-6 object-contain" />;
-    case "Google Drive": return <img src="/wispsgoogledrive.png" alt="Google Drive" className="w-6 h-6 object-contain" />;
-    case "Notion": return <img src="/wispsnotionlogo.png" alt="Notion" className="w-6 h-6 object-contain" />;
-    case "LinkedIn": return <img src="/wispslinkedinlogo.png" alt="LinkedIn" className="w-6 h-6 object-contain" />;
+    case "Gmail": return <img src="/dotiegmaillogo.png" alt="Gmail" className="w-6 h-6 object-contain" />;
+    case "Outlook": return <img src="/dotieoutlook.png" alt="Outlook" className="w-6 h-6 object-contain" />;
+    case "Google Calendar": return <img src="/dotiecalendarlogo.png" alt="Google Calendar" className="w-6 h-6 object-contain" />;
+    case "Google Drive": return <img src="/dotiegoogledrive.png" alt="Google Drive" className="w-6 h-6 object-contain" />;
+    case "Notion": return <img src="/dotienotionlogo.png" alt="Notion" className="w-6 h-6 object-contain" />;
+    case "LinkedIn": return <img src="/dotielinkedinlogo.png" alt="LinkedIn" className="w-6 h-6 object-contain" />;
     default: return <Plug className="w-5 h-5 text-gray-600" />;
   }
 }
@@ -414,17 +414,17 @@ function DashboardSupport() {
   const [openRow, setOpenRow] = useState<string | null>(null);
   
   const faqs = [
-    { q: "Wisps not responding?", a: "Ensure you have a stable internet connection. If the issue persists, try logging out and logging back in." },
+    { q: "Dotie not responding?", a: "Ensure you have a stable internet connection. If the issue persists, try logging out and logging back in." },
     { q: "Changed your phone number?", a: "You can update your phone number in the Profile tab. A verification code will be sent to the new number." },
-    { q: "Need help with something else?", a: "Reach out to us at support@wisps.ai and our team will get back to you within 24 hours." },
-    { q: "Delete chat data", a: "You can permanently delete all chat history by sending 'Delete my data' to Wisps." },
+    { q: "Need help with something else?", a: "Reach out to us at support@dotie.ai and our team will get back to you within 24 hours." },
+    { q: "Delete chat data", a: "You can permanently delete all chat history by sending 'Delete my data' to Dotie." },
   ];
 
   return (
     <div className="bg-white border border-black/10 rounded-[20px] shadow-sm overflow-hidden w-full">
       <div className="p-5 border-b border-black/5">
         <h3 className="font-semibold text-lg text-black">Support</h3>
-        <p className="text-[13px] text-gray-500 mt-0.5">Get help with Wisps.</p>
+        <p className="text-[13px] text-gray-500 mt-0.5">Get help with Dotie.</p>
       </div>
       <div className="flex flex-col">
         {faqs.map((faq, i) => (
@@ -460,7 +460,7 @@ function DashboardSettings() {
       <div className="bg-white border border-black/10 rounded-[20px] shadow-sm overflow-hidden">
         <div className="p-5 border-b border-black/5">
           <h3 className="font-semibold text-lg text-black">Appearance</h3>
-          <p className="text-[13px] text-gray-500 mt-0.5">Choose how Wisps looks on this device.</p>
+          <p className="text-[13px] text-gray-500 mt-0.5">Choose how Dotie looks on this device.</p>
         </div>
         <div className="p-5 flex items-center gap-6">
           <RadioOption icon={Monitor} label="System" value="system" selected={appearance === "system"} onSelect={setAppearance} />
@@ -472,7 +472,7 @@ function DashboardSettings() {
       <div className="bg-white border border-black/10 rounded-[20px] shadow-sm overflow-hidden pb-6">
         <div className="p-5 border-b border-black/5">
           <h3 className="font-semibold text-lg text-black">Billing</h3>
-          <p className="text-[13px] text-gray-500 mt-0.5">Get access to Wisps and manage your plan.</p>
+          <p className="text-[13px] text-gray-500 mt-0.5">Get access to Dotie and manage your plan.</p>
         </div>
         <div className="p-5 flex flex-col items-center">
           <p className="text-[13px] text-gray-500 mb-4">No commitment, cancel anytime.</p>

@@ -12,10 +12,10 @@ import {
 export const Route = createFileRoute("/faq")({
   head: () => ({
     meta: [
-      { title: "Frequently Asked Questions — Wisps Careers" },
+      { title: "Frequently Asked Questions — Dotie Careers" },
       {
         name: "description",
-        content: "Find answers to frequently asked questions about working at Wisps.",
+        content: "Find answers to frequently asked questions about working at Dotie.",
       },
     ],
   }),
@@ -55,7 +55,7 @@ function Faq() {
                     className="inline-flex items-center gap-2 text-foreground hover:opacity-70 transition-opacity text-left"
                   >
                     <span className="w-3">→</span>
-                    <span className="underline underline-offset-4 decoration-black/30">Working at Wisps</span>
+                    <span className="underline underline-offset-4 decoration-black/30">Working at Dotie</span>
                   </button>
                 </li>
                 <li>
@@ -88,13 +88,13 @@ function Faq() {
           </h1>
 
           <div className="space-y-24 md:space-y-32">
-            {/* Working at Wisps */}
+            {/* Working at Dotie */}
             <section id="working" className="scroll-mt-24">
-              <h2 className="text-2xl md:text-3xl font-medium tracking-tight mb-8">Working at Wisps</h2>
+              <h2 className="text-2xl md:text-3xl font-medium tracking-tight mb-8">Working at Dotie</h2>
               <Accordion type="multiple" className="w-full border-t border-black/10">
                 <AccordionItem value="item-1" className="border-b border-black/10">
                   <AccordionTrigger className="text-lg md:text-xl font-normal py-6 hover:no-underline hover:opacity-70">
-                    Is it true that Wisps is a demanding workplace?
+                    Is it true that Dotie is a demanding workplace?
                   </AccordionTrigger>
                   <AccordionContent className="text-base text-muted-foreground leading-relaxed">
                     Yes, we maintain high standards and expect strong dedication, but we also ensure you have the best tools, smart colleagues, and support to do your best work.
@@ -120,7 +120,7 @@ function Faq() {
                     How does the application process work?
                   </AccordionTrigger>
                   <AccordionContent className="text-base text-muted-foreground leading-relaxed">
-                    After you apply, we review your application. If it's a match, you'll go through a series of technical and cultural interviews designed to assess your skills and fit for Wisps.
+                    After you apply, we review your application. If it's a match, you'll go through a series of technical and cultural interviews designed to assess your skills and fit for Dotie.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-4" className="border-b border-black/10">
@@ -141,7 +141,7 @@ function Faq() {
                 </AccordionItem>
                 <AccordionItem value="item-6" className="border-b border-black/10">
                   <AccordionTrigger className="text-lg md:text-xl font-normal py-6 hover:no-underline hover:opacity-70 text-left">
-                    I'm interested in working at Wisps, but I don't have any experience. What do you recommend?
+                    I'm interested in working at Dotie, but I don't have any experience. What do you recommend?
                   </AccordionTrigger>
                   <AccordionContent className="text-base text-muted-foreground leading-relaxed">
                     Look for our internship or entry-level opportunities. We value potential, curiosity, and a drive to learn just as much as past experience.
@@ -149,7 +149,7 @@ function Faq() {
                 </AccordionItem>
                 <AccordionItem value="item-7" className="border-b border-black/10">
                   <AccordionTrigger className="text-lg md:text-xl font-normal py-6 hover:no-underline hover:opacity-70 text-left">
-                    I'd love to work at Wisps, but I don't see an open job that fits my skill set. Do you accept general applications?
+                    I'd love to work at Dotie, but I don't see an open job that fits my skill set. Do you accept general applications?
                   </AccordionTrigger>
                   <AccordionContent className="text-base text-muted-foreground leading-relaxed">
                     Yes, you can submit an open application through our careers portal, and we'll keep your profile in mind for future openings.
@@ -157,7 +157,7 @@ function Faq() {
                 </AccordionItem>
                 <AccordionItem value="item-8" className="border-b border-black/10">
                   <AccordionTrigger className="text-lg md:text-xl font-normal py-6 hover:no-underline hover:opacity-70 text-left">
-                    I received an email telling me that Wisps won't be continuing with my application. Can I have some feedback?
+                    I received an email telling me that Dotie won't be continuing with my application. Can I have some feedback?
                   </AccordionTrigger>
                   <AccordionContent className="text-base text-muted-foreground leading-relaxed">
                     Due to the high volume of applications, we unfortunately cannot provide individualized feedback for candidates before the interview stage.
@@ -232,7 +232,7 @@ function Faq() {
             {/* Footer help */}
             <div className="pb-32 text-center text-muted-foreground">
               <p>Can't find what you're looking for?</p>
-              <a href="mailto:contact@wisps.com" className="text-foreground underline underline-offset-4 hover:opacity-70 transition-opacity">Contact us</a>.
+              <a href="mailto:contact@dotie.com" className="text-foreground underline underline-offset-4 hover:opacity-70 transition-opacity">Contact us</a>.
             </div>
 
           </div>

@@ -16,17 +16,17 @@ import { Nav } from "../components/Nav";
 export const Route = createFileRoute("/terms")({
   head: () => ({
     meta: [
-      { title: "Terms of Service — Wisps" },
+      { title: "Terms of Service — Dotie" },
       {
         name: "description",
         content:
-          "Global Terms of Service for Wisps, governed by Indian law and designed for worldwide use.",
+          "Global Terms of Service for Dotie, governed by Indian law and designed for worldwide use.",
       },
-      { property: "og:title", content: "Terms of Service — Wisps" },
+      { property: "og:title", content: "Terms of Service — Dotie" },
       {
         property: "og:description",
         content:
-          "Global Terms of Service for Wisps, with India as the base jurisdiction and mandatory local law carveouts.",
+          "Global Terms of Service for Dotie, with India as the base jurisdiction and mandatory local law carveouts.",
       },
     ],
   }),
@@ -341,10 +341,10 @@ function TermsPage() {
                 <p>
                   If you have questions about these Terms, contact us at{" "}
                   <a
-                    href="mailto:contact@usewisps.com"
+                    href="mailto:contact@usedotie.com"
                     className="font-medium text-foreground hover:underline underline-offset-4"
                   >
-                    contact@usewisps.com
+                    contact@usedotie.com
                   </a>
                   .
                 </p>

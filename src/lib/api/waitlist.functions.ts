@@ -97,15 +97,15 @@ export const sendWaitlistOtp = createServerFn({ method: "POST" })
       attempts: 0,
     });
 
-    // Send the OTP email via Resend from founders@wisps.in
+    // Send the OTP email via Resend from founders@dotie.in
     const { error } = await resend.emails.send({
-      from: "Wisps <founders@wisps.in>",
+      from: "Dotie <founders@dotie.in>",
       to: data.email,
-      subject: "Your Wisps Waitlist Verification Code",
+      subject: "Your Dotie Waitlist Verification Code",
       html: `
         <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 480px; margin: 0 auto; padding: 40px 20px; color: #1a1a1a;">
           <h1 style="font-size: 24px; font-weight: 700; margin-bottom: 8px; letter-spacing: -0.5px;">
-            Join the Wisps Waitlist
+            Join the Dotie Waitlist
           </h1>
           <p style="font-size: 15px; color: #555; margin-bottom: 28px; line-height: 1.5;">
             Hi ${data.name.trim()}, here is your verification code to secure your spot in line:
@@ -123,7 +123,7 @@ export const sendWaitlistOtp = createServerFn({ method: "POST" })
           </p>
           <hr style="border: none; border-top: 1px solid #e4e4e7; margin: 32px 0 16px;" />
           <p style="font-size: 12px; color: #9f9ea6; text-align: center; margin: 0;">
-            Wisps Cursor for your professional life, inside iMessage.
+            Dotie Cursor for your professional life, inside iMessage.
           </p>
         </div>
       `,

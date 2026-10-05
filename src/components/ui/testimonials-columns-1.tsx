@@ -55,7 +55,7 @@ export const TestimonialsColumn = (props: {
 
 const testimonials = [
   {
-    text: "Wisps saves me 2 hours every day on email. The AI drafts are indistinguishable from my own writing.",
+    text: "Dotie saves me 2 hours every day on email. The AI drafts are indistinguishable from my own writing.",
     image:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face",
     name: "Sarah Chen",
@@ -83,7 +83,7 @@ const testimonials = [
     role: "Engineering Manager",
   },
   {
-    text: "Wisps's search is like magic. I can find any email or attachment with just a natural question.",
+    text: "Dotie's search is like magic. I can find any email or attachment with just a natural question.",
     image:
       "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face",
     name: "Lisa Thompson",
@@ -97,7 +97,7 @@ const testimonials = [
     role: "CEO",
   },
   {
-    text: "Privacy was our main concern. Wisps's end-to-end encryption gave our legal team complete confidence.",
+    text: "Privacy was our main concern. Dotie's end-to-end encryption gave our legal team complete confidence.",
     image:
       "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face",
     name: "Amanda Foster",
@@ -111,7 +111,7 @@ const testimonials = [
     role: "Startup Founder",
   },
   {
-    text: "Our response time improved by 60%. Wisps handles the busywork so we can focus on closing deals.",
+    text: "Our response time improved by 60%. Dotie handles the busywork so we can focus on closing deals.",
     image:
       "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&h=100&fit=crop&crop=face",
     name: "Jennifer Lee",

@@ -17,13 +17,13 @@ import { Nav } from "../components/Nav";
 export const Route = createFileRoute("/enterprise")({
   head: () => ({
     meta: [
-      { title: "Enterprise — Wisps" },
+      { title: "Enterprise — Dotie" },
       {
         name: "description",
         content:
           "Powerful, secure email for modern teams. SOC 2 Type II, encryption everywhere, and no AI training on your data.",
       },
-      { property: "og:title", content: "Wisps for Enterprise" },
+      { property: "og:title", content: "Dotie for Enterprise" },
       {
         property: "og:description",
         content: "Enterprise-grade security, compliance, and control for your team's inbox.",
@@ -168,7 +168,7 @@ const testimonials = [
     name: "Priya",
     role: "COO, Northwind",
     quote:
-      "Wisps quietly handles 80% of my inbox. I get to focus on the conversations that actually move the company.",
+      "Dotie quietly handles 80% of my inbox. I get to focus on the conversations that actually move the company.",
   },
   {
     name: "Marcus",
@@ -228,8 +228,8 @@ function Testimonials() {
 
 const faqs = [
   {
-    q: "What security certifications does Wisps have?",
-    a: "Wisps is SOC 2 Type II certified and CASA Tier 2 audited. We undergo independent penetration tests every six months.",
+    q: "What security certifications does Dotie have?",
+    a: "Dotie is SOC 2 Type II certified and CASA Tier 2 audited. We undergo independent penetration tests every six months.",
   },
   {
     q: "Do you use customer data to train AI models?",
@@ -240,8 +240,8 @@ const faqs = [
     a: "All data is encrypted in transit using TLS 1.3+ and at rest with AES-256. Encryption keys are rotated regularly.",
   },
   {
-    q: "How does Wisps access my email?",
-    a: "Wisps connects via secure OAuth tokens with the minimum scopes required. You can revoke access at any time.",
+    q: "How does Dotie access my email?",
+    a: "Dotie connects via secure OAuth tokens with the minimum scopes required. You can revoke access at any time.",
   },
   {
     q: "What control do I have over my data?",

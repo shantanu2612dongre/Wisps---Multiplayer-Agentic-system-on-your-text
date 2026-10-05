@@ -3,12 +3,12 @@ import React, { useEffect, useState, useRef } from "react";
 
 
 const CONVERSATION = [
-  { from: "wisps", text: "hey — linda's been asking about the last PR's git issues" },
+  { from: "dotie", text: "hey — linda's been asking about the last PR's git issues" },
   { from: "user", text: "what is it" },
-  { from: "wisps", text: "found two: the CI lint step is failing on the auth module, and the migration script conflicts with main" },
-  { from: "wisps", text: "want me to let her know?" },
+  { from: "dotie", text: "found two: the CI lint step is failing on the auth module, and the migration script conflicts with main" },
+  { from: "dotie", text: "want me to let her know?" },
   { from: "user", text: "yes" },
-  { from: "wisps", text: "here's what I'd send — \"hey linda, found two issues on the last PR: the CI lint step's failing on auth, and the migration script conflicts with main. want me to open tickets for both?\"" },
+  { from: "dotie", text: "here's what I'd send — \"hey linda, found two issues on the last PR: the CI lint step's failing on auth, and the migration script conflicts with main. want me to open tickets for both?\"" },
 ];
 const SUGGESTIONS = ["Send it", "Let me edit"];
 
@@ -26,7 +26,7 @@ const RESET_PAUSE = 700;
 
 const AUTOPLAY_MS = 4000;
 
-export default function WispsFeatureMockup({ activeIndex }: { activeIndex?: number }) {
+export default function DotieFeatureMockup({ activeIndex }: { activeIndex?: number }) {
   const [internalIndex, setInternalIndex] = useState(0);
   const controlled = typeof activeIndex === "number";
   const index = controlled ? activeIndex : internalIndex;
@@ -192,7 +192,7 @@ export default function WispsFeatureMockup({ activeIndex }: { activeIndex?: numb
           color: #fff;
           border-bottom-right-radius: 4px;
         }
-        .wfm-bubble--wisps {
+        .wfm-bubble--dotie {
           align-self: flex-start;
           background: #e9e9eb;
           color: #0b0b0d;
@@ -389,16 +389,16 @@ export default function WispsFeatureMockup({ activeIndex }: { activeIndex?: numb
 
           <div className="wfm-screens">
             {/* 0 — Tone Memory */}
-            <AnimatedChatScreen active={index === 0} title="wisps" pill="Tone Memory" conversation={CONVERSATION} suggestions={SUGGESTIONS} timing={TIMING} />
+            <AnimatedChatScreen active={index === 0} title="dotie" pill="Tone Memory" conversation={CONVERSATION} suggestions={SUGGESTIONS} timing={TIMING} />
 
             {/* 1 — One brain, every tool */}
-            <AnimatedChatScreen active={index === 1} title="wisps" pill="One brain, every tool" conversation={ONE_BRAIN_CONVERSATION} suggestions={ONE_BRAIN_SUGGESTIONS} timing={ONE_BRAIN_TIMING} />
+            <AnimatedChatScreen active={index === 1} title="dotie" pill="One brain, every tool" conversation={ONE_BRAIN_CONVERSATION} suggestions={ONE_BRAIN_SUGGESTIONS} timing={ONE_BRAIN_TIMING} />
 
             {/* 2 — Ask anything */}
-            <AnimatedChatScreen active={index === 2} title="wisps" pill="Ask anything" conversation={ASK_ANYTHING_CONVERSATION} suggestions={ASK_ANYTHING_SUGGESTIONS} timing={ASK_ANYTHING_TIMING} />
+            <AnimatedChatScreen active={index === 2} title="dotie" pill="Ask anything" conversation={ASK_ANYTHING_CONVERSATION} suggestions={ASK_ANYTHING_SUGGESTIONS} timing={ASK_ANYTHING_TIMING} />
 
             {/* 3 — Smart follow-ups */}
-            <AnimatedChatScreen active={index === 3} title="wisps" pill="Smart follow-ups" conversation={SMART_FOLLOWUP_CONVERSATION} suggestions={SMART_FOLLOWUP_SUGGESTIONS} timing={SMART_FOLLOWUP_TIMING} />
+            <AnimatedChatScreen active={index === 3} title="dotie" pill="Smart follow-ups" conversation={SMART_FOLLOWUP_CONVERSATION} suggestions={SMART_FOLLOWUP_SUGGESTIONS} timing={SMART_FOLLOWUP_TIMING} />
           </div>
         </div>
       </div>
@@ -444,7 +444,7 @@ function Row({ sender, time, subject, tag, dot, highlight }: { sender: string, t
 
 function TypingBubble() {
   return (
-    <div className="wfm-bubble wfm-bubble--wisps wfm-typing">
+    <div className="wfm-bubble wfm-bubble--dotie wfm-typing">
       <span className="wfm-dot" />
       <span className="wfm-dot" />
       <span className="wfm-dot" />
@@ -534,7 +534,7 @@ function AnimatedChatScreen({ active, title, pill, conversation, suggestions, ti
           <img src="/wispsmascot.png" alt="wisps" />
         </div>
         <div className="wfm-headertext">
-          <span className="name">wisps</span>
+          <span className="name">dotie</span>
           <span className="chevron">›</span>
         </div>
         <svg className="wfm-video" viewBox="0 0 20 15" fill="currentColor">
@@ -548,7 +548,7 @@ function AnimatedChatScreen({ active, title, pill, conversation, suggestions, ti
             {m.text}
           </div>
         ))}
-        {typingFrom === "wisps" && <TypingBubble />}
+        {typingFrom === "dotie" && <TypingBubble />}
       </div>
       {showSuggestions && (
         <div className="wfm-suggestions">
@@ -567,9 +567,9 @@ function AnimatedChatScreen({ active, title, pill, conversation, suggestions, ti
 
 const ASK_ANYTHING_CONVERSATION = [
   { from: "user", text: "when does our AWS reserved instance renewal come up" },
-  { from: "wisps", text: "found it — it's in the invoice AWS sent on July 14th" },
-  { from: "wisps", text: "renewal date is Sept 30, auto-renews unless cancelled 7 days before" },
-  { from: "wisps", text: "from: billing@aws.com · attachment: invoice-9042.pdf" },
+  { from: "dotie", text: "found it — it's in the invoice AWS sent on July 14th" },
+  { from: "dotie", text: "renewal date is Sept 30, auto-renews unless cancelled 7 days before" },
+  { from: "dotie", text: "from: billing@aws.com · attachment: invoice-9042.pdf" },
   { from: "user", text: "perfect, thanks" },
 ];
 
@@ -585,13 +585,13 @@ const ASK_ANYTHING_TIMING = [
 
 
 const ONE_BRAIN_CONVERSATION = [
-  { from: "wisps", text: "morning — cleared 47 notifications overnight across slack, email, and github" },
-  { from: "wisps", text: "newsletters, CI pings, standup bot messages — none of it needed you" },
-  { from: "wisps", text: "2 things actually do:" },
-  { from: "wisps", text: "1. priya asked on slack if staging's ready for the demo" },
-  { from: "wisps", text: "2. github flagged a merge conflict on the pricing-page branch" },
+  { from: "dotie", text: "morning — cleared 47 notifications overnight across slack, email, and github" },
+  { from: "dotie", text: "newsletters, CI pings, standup bot messages — none of it needed you" },
+  { from: "dotie", text: "2 things actually do:" },
+  { from: "dotie", text: "1. priya asked on slack if staging's ready for the demo" },
+  { from: "dotie", text: "2. github flagged a merge conflict on the pricing-page branch" },
   { from: "user", text: "staging's ready, tell priya" },
-  { from: "wisps", text: "sent — \"hey priya, staging's ready whenever you want to walk through it\"" },
+  { from: "dotie", text: "sent — \"hey priya, staging's ready whenever you want to walk through it\"" },
 ];
 
 const ONE_BRAIN_SUGGESTIONS: string[] = [];
@@ -607,12 +607,12 @@ const ONE_BRAIN_TIMING = [
 ];
 
 const SMART_FOLLOWUP_CONVERSATION = [
-  { from: "wisps", text: "hey — remember Sarah from Nimbus? she emailed 3 weeks ago asking about enterprise pricing, never got a reply" },
+  { from: "dotie", text: "hey — remember Sarah from Nimbus? she emailed 3 weeks ago asking about enterprise pricing, never got a reply" },
   { from: "user", text: "oh damn, totally forgot about that" },
-  { from: "wisps", text: "she just posted on LinkedIn that they're finalizing a vendor by friday" },
-  { from: "wisps", text: "might be worth closing the loop today" },
+  { from: "dotie", text: "she just posted on LinkedIn that they're finalizing a vendor by friday" },
+  { from: "dotie", text: "might be worth closing the loop today" },
   { from: "user", text: "yeah, send something" },
-  { from: "wisps", text: "here's what I'd send — \"hi sarah, sorry for the delay! here's our enterprise pricing: [link]. happy to hop on a call before friday if that's useful.\"" },
+  { from: "dotie", text: "here's what I'd send — \"hi sarah, sorry for the delay! here's our enterprise pricing: [link]. happy to hop on a call before friday if that's useful.\"" },
 ];
 
 const SMART_FOLLOWUP_SUGGESTIONS = ["Use draft", "Edit"];
