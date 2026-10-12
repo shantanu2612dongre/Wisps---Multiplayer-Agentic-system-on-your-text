@@ -29,7 +29,8 @@ export function Nav() {
           <div className="absolute left-1/2 -translate-x-1/2">
             <a
               href="/"
-              className="flex items-center gap-2.5 font-black text-foreground tracking-tight text-3xl lg:text-[2.25rem]"
+              className="flex items-center gap-2.5 font-bold text-foreground tracking-tight text-3xl lg:text-[2.25rem]"
+              style={{ fontFamily: "'Delius Unicase', cursive" }}
             >
               <img src="/wispsmascot.png" alt="Wisps logo" className="h-10 w-10 lg:h-12 lg:w-12 object-contain" />
               Dotie
