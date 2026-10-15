@@ -2,7 +2,7 @@
 @source "../src";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
+/* @custom-variant dark (&:is(.dark *)); */
 
 /*
  * Design system definition.
@@ -114,7 +114,7 @@
   --sidebar-ring: oklch(0.704 0.04 256.788);
 }
 
-.dark {
+/* .dark {
   --background: oklch(0.129 0.042 264.695);
   --foreground: oklch(0.984 0.003 247.858);
   --card: oklch(0.208 0.042 265.755);
@@ -147,7 +147,7 @@
   --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
-}
+} */
 
 @layer base {
   * {
@@ -218,9 +218,9 @@
   z-index: 1;
 }
 
-.dark .bg-hero-wash-page::before {
+/* .dark .bg-hero-wash-page::before {
   display: none;
-}
+} */
 
 /* ── Hero wash: multi-color mesh on LEFT side only, fades right & bottom ── */
 .bg-hero-wash {
@@ -349,9 +349,9 @@
   z-index: 1;
 }
 
-.dark .bg-hero-wash-right::before {
+/* .dark .bg-hero-wash-right::before {
   display: none;
-}
+} */
 
 
 
@@ -376,7 +376,7 @@
     );
 }
 
-.dark .bg-hero-wash::before {
+/* .dark .bg-hero-wash::before {
   display: none;
 }
 
@@ -389,13 +389,13 @@
 .dark .bg-textured-paper {
   background-color: var(--color-background);
   background-image: none;
-}
+} */
 
 /* Mascot: blend white bg into the page — invisible on light backgrounds */
 img[src*="dotiemascot"] {
   mix-blend-mode: multiply;
 }
 
-.dark img[src*="dotiemascot"] {
+/* .dark img[src*="dotiemascot"] {
   mix-blend-mode: normal;
-}
+} */

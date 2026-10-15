@@ -1,12 +1,12 @@
 import { Sparkles, Linkedin, Twitter, Instagram, Youtube, Facebook, Mail } from "lucide-react";
-import { ThemeToggle } from "./ThemeToggle";
+// import { ThemeToggle } from "./ThemeToggle";
 
 export function Footer() {
   return (
     <footer className="relative border-t border-border/60 bg-textured-paper pt-20 pb-10 overflow-hidden">
       {/* Background Wordmark "dotie" */}
       <div className="absolute bottom-[-2.5rem] md:bottom-[-4rem] left-1/2 -translate-x-1/2 w-full max-w-7xl px-6 pointer-events-none select-none z-0">
-        <h2 className="text-[9rem] sm:text-[12rem] md:text-[18rem] lg:text-[22rem] font-bold text-center tracking-tighter text-foreground/[0.03] dark:text-foreground/[0.02] leading-none uppercase">
+        <h2 className="text-[9rem] sm:text-[12rem] md:text-[18rem] lg:text-[22rem] font-bold text-center tracking-tighter text-foreground/[0.03] leading-none uppercase">
           dotie
         </h2>
       </div>
@@ -234,7 +234,7 @@ export function Footer() {
         <div className="border-t border-border/60 pt-8 flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-muted-foreground relative z-10">
           <div className="flex flex-col sm:flex-row items-center gap-6">
             <div>© {new Date().getFullYear()} Dotie. All rights reserved.</div>
-            <ThemeToggle />
+            {/* <ThemeToggle /> */}
           </div>
           <div className="flex items-center gap-6">
             <a href="/terms" className="hover:text-foreground transition-colors">
