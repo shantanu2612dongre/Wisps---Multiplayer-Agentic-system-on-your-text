@@ -31,7 +31,7 @@ function Faq() {
   };
 
   return (
-    <main className="min-h-screen bg-background text-foreground antialiased font-sans">
+    <main className="min-h-screen bg-page-wash text-foreground antialiased font-sans">
       <Nav />
       
       <div className="max-w-6xl mx-auto px-6 py-12 md:py-20 flex flex-col md:flex-row gap-16 relative">

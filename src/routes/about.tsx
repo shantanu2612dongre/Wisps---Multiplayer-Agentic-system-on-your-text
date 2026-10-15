@@ -49,6 +49,7 @@ function Hero() {
   );
 }
 
+
 const manifestoPoints = [
   {
     title: "Purpose over productivity",
@@ -112,12 +113,14 @@ function Manifesto() {
 
 function About() {
   return (
-    <main className="relative min-h-screen bg-background text-foreground antialiased overflow-x-hidden">
-      <div className="absolute top-0 left-0 right-0 h-[800px] bg-gradient-to-b from-primary-glow/10 via-transparent to-transparent pointer-events-none" />
+    <main className="relative min-h-screen bg-page-wash text-foreground antialiased overflow-x-hidden">
       <Nav />
-      <Hero />
-      <Manifesto />
-      <Footer />
+      <section className="relative bg-hero-wash-page overflow-hidden">
+        <Hero />
+        <Manifesto />
+        <Footer />
+      </section>
     </main>
   );
 }
+

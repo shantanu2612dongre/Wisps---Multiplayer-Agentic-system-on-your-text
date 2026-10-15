@@ -168,6 +168,224 @@
   background-image: none;
 }
 
+/* ── Hero wash PAGE: full-height left gradient, no vertical fade (for full-page wrappers like Careers) ── */
+.bg-hero-wash-page {
+  background-color: transparent;
+  position: relative;
+}
+
+.bg-hero-wash-page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    radial-gradient(
+      ellipse 80% 120% at -5% 50%,
+      oklch(0.84 0.13 20 / 0.28) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 65% 90% at 5% 20%,
+      oklch(0.78 0.12 290 / 0.20) 0%,
+      transparent 65%
+    ),
+    radial-gradient(
+      ellipse 55% 80% at 10% 80%,
+      oklch(0.82 0.13 45 / 0.18) 0%,
+      transparent 65%
+    );
+  /* Only horizontal fade — no vertical clipping */
+  mask-image: linear-gradient(
+    to right,
+    black 0%,
+    black 15%,
+    rgba(0,0,0,0.5) 35%,
+    transparent 60%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    black 0%,
+    black 15%,
+    rgba(0,0,0,0.5) 35%,
+    transparent 60%
+  );
+}
+
+.bg-hero-wash-page > * {
+  position: relative;
+  z-index: 1;
+}
+
+.dark .bg-hero-wash-page::before {
+  display: none;
+}
+
+/* ── Hero wash: multi-color mesh on LEFT side only, fades right & bottom ── */
+.bg-hero-wash {
+  background-color: transparent;
+  position: relative;
+}
+
+.bg-hero-wash::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    radial-gradient(
+      ellipse 80% 120% at -5% 50%,
+      oklch(0.84 0.13 20 / 0.28) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 65% 90% at 5% 20%,
+      oklch(0.78 0.12 290 / 0.20) 0%,
+      transparent 65%
+    ),
+    radial-gradient(
+      ellipse 55% 80% at 10% 70%,
+      oklch(0.82 0.13 45 / 0.18) 0%,
+      transparent 65%
+    );
+  /* Wide gentle fade to right + soft top/bottom blend */
+  mask-image: linear-gradient(
+    to right,
+    black 0%,
+    black 15%,
+    rgba(0,0,0,0.5) 35%,
+    transparent 60%
+  ),
+  linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 15%,
+    black 65%,
+    transparent 100%
+  );
+  mask-composite: intersect;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    black 0%,
+    black 15%,
+    rgba(0,0,0,0.5) 35%,
+    transparent 60%
+  ),
+  linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 15%,
+    black 65%,
+    transparent 100%
+  );
+  -webkit-mask-composite: destination-in;
+}
+
+/* ── Hero wash RIGHT: same mesh but anchored to the right side ── */
+.bg-hero-wash-right {
+  background-color: transparent;
+  position: relative;
+}
+
+.bg-hero-wash-right::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    radial-gradient(
+      ellipse 80% 120% at 105% 50%,
+      oklch(0.84 0.13 20 / 0.28) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 65% 90% at 95% 20%,
+      oklch(0.78 0.12 290 / 0.20) 0%,
+      transparent 65%
+    ),
+    radial-gradient(
+      ellipse 55% 80% at 90% 70%,
+      oklch(0.82 0.13 45 / 0.18) 0%,
+      transparent 65%
+    );
+  /* Wide gentle fade to left + soft top/bottom blend */
+  mask-image: linear-gradient(
+    to left,
+    black 0%,
+    black 15%,
+    rgba(0,0,0,0.5) 35%,
+    transparent 60%
+  ),
+  linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 15%,
+    black 65%,
+    transparent 100%
+  );
+  mask-composite: intersect;
+  -webkit-mask-image: linear-gradient(
+    to left,
+    black 0%,
+    black 15%,
+    rgba(0,0,0,0.5) 35%,
+    transparent 60%
+  ),
+  linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 15%,
+    black 65%,
+    transparent 100%
+  );
+  -webkit-mask-composite: destination-in;
+}
+
+.bg-hero-wash-right > * {
+  position: relative;
+  z-index: 1;
+}
+
+.dark .bg-hero-wash-right::before {
+  display: none;
+}
+
+
+
+/* ── Page wash: matching soft left-side tint for the full page ── */
+.bg-page-wash {
+  background-color: #ffffff;
+  background-image:
+    radial-gradient(
+      ellipse 40% 60% at 0% 15%,
+      oklch(0.83 0.10 10 / 0.18) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 30% 40% at 5% 35%,
+      oklch(0.80 0.09 290 / 0.12) 0%,
+      transparent 65%
+    ),
+    radial-gradient(
+      ellipse 25% 35% at 0% 55%,
+      oklch(0.84 0.10 55 / 0.10) 0%,
+      transparent 60%
+    );
+}
+
+.dark .bg-hero-wash::before {
+  display: none;
+}
+
+.dark .bg-page-wash {
+  background-color: var(--color-background);
+  background-image: none;
+}
+
+
 .dark .bg-textured-paper {
   background-color: var(--color-background);
   background-image: none;

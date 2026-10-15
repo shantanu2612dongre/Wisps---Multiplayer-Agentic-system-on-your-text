@@ -31,16 +31,7 @@ const fadeUp = {
 
 function Hero() {
   return (
-    <section className="relative overflow-hidden">
-      {/* Soft sunrise wash, echoing the Dotie palette */}
-      <div
-        aria-hidden
-        className="absolute inset-0 -z-10"
-        style={{
-          background:
-            "linear-gradient(135deg, oklch(0.95 0.045 55) 0%, oklch(0.94 0.04 35) 35%, oklch(0.9 0.06 340) 70%, oklch(0.85 0.08 300) 100%)",
-        }}
-      />
+    <section className="relative overflow-hidden bg-hero-wash">
       <div className="relative max-w-5xl mx-auto px-6 pt-28 pb-20 text-center">
         <motion.div
           variants={fadeUp}
@@ -568,7 +559,7 @@ function Birds({ className = "" }: { className?: string }) {
 
 function ForAgentsPage() {
   return (
-    <main className="min-h-screen bg-background text-foreground antialiased">
+    <main className="min-h-screen bg-page-wash text-foreground antialiased">
       <Nav />
       <Hero />
       <Agents />

@@ -69,10 +69,9 @@ function Careers() {
   });
 
   return (
-    <main className="relative min-h-screen bg-background text-foreground antialiased overflow-x-hidden">
-      <div className="absolute top-0 left-0 right-0 h-[800px] bg-gradient-to-b from-primary-glow/10 via-transparent to-transparent pointer-events-none" />
+    <main className="relative min-h-screen bg-page-wash text-foreground antialiased overflow-x-hidden">
       <Nav />
-      <section className="relative py-12 md:py-24">
+      <section className="relative bg-hero-wash py-12 md:py-24">
         <div className="relative max-w-4xl mx-auto px-6">
           <motion.div
             variants={fadeUp}

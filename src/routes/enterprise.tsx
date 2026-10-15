@@ -44,7 +44,7 @@ const fadeUp = {
 
 function Hero() {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden bg-hero-wash">
       <div className="max-w-5xl mx-auto px-6 pt-24 pb-16 text-center">
         <motion.h1
           variants={fadeUp}
@@ -310,7 +310,7 @@ function FAQ() {
 
 function EnterprisePage() {
   return (
-    <main className="min-h-screen bg-background text-foreground antialiased">
+    <main className="min-h-screen bg-page-wash text-foreground antialiased">
       <Nav />
       <Hero />
       <Security />

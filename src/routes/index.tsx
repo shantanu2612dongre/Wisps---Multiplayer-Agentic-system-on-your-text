@@ -1576,7 +1576,7 @@ function Features() {
   }, [isPaused]);
 
   return (
-    <section id="features" className="relative py-28 bg-textured-paper">
+    <section id="features" className="relative py-28 bg-textured-paper bg-hero-wash">
       <div className="max-w-7xl mx-auto px-6">
         {/* Centered section heading */}
         <motion.div
@@ -2300,9 +2300,10 @@ function DataControl() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="text-4xl md:text-5xl font-medium tracking-tight text-foreground max-w-2xl mx-auto text-center"
+          className="text-3xl md:text-4xl font-medium tracking-tight text-foreground max-w-2xl mx-auto text-center"
+          style={{ fontFamily: "'Playfair Display', serif" }}
         >
-          You control<br />your data.
+          You control your data.
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -2662,7 +2663,7 @@ const agents = [
 
 function AgentCards() {
   return (
-    <section className="relative py-24 bg-white">
+    <section className="relative py-24 bg-white bg-hero-wash-right overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         {/* Section heading */}
         <motion.div

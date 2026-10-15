@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import { motion } from "motion/react";
 import {
@@ -14,6 +14,15 @@ import {
 import { Footer } from "../components/Footer";
 import { Nav } from "../components/Nav";
 
+// BLOG PAGE TEMPORARILY DISABLED — restore by replacing this Route with the commented one below
+export const Route = createFileRoute("/blog")({
+  beforeLoad: () => {
+    throw redirect({ to: "/" });
+  },
+  component: () => null,
+});
+
+/* ── ORIGINAL ROUTE (restore when ready) ──────────────────────────────────
 export const Route = createFileRoute("/blog")({
   head: () => ({
     meta: [
@@ -31,6 +40,8 @@ export const Route = createFileRoute("/blog")({
   }),
   component: BlogPage,
 });
+────────────────────────────────────────────────────────────────────────── */
+
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -246,10 +257,9 @@ function PostCard({ post, index }: { post: (typeof posts)[number]; index: number
 
 function BlogPage() {
   return (
-    <main className="relative min-h-screen bg-background text-foreground antialiased overflow-x-hidden">
-      <div className="absolute top-0 left-0 right-0 h-[800px] bg-gradient-to-b from-primary-glow/10 via-transparent to-transparent pointer-events-none" />
+    <main className="relative min-h-screen bg-page-wash text-foreground antialiased overflow-x-hidden">
       <Nav />
-      <div className="relative overflow-hidden pb-16">
+      <section className="relative bg-hero-wash-page overflow-hidden pb-16">
         <Hero />
         <FilterBar />
         <SectionShell>
@@ -292,8 +302,8 @@ function BlogPage() {
             </div>
           </motion.section>
         </SectionShell>
-      </div>
-      <Footer />
+        <Footer />
+      </section>
     </main>
   );
 }
