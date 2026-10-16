@@ -2331,22 +2331,11 @@ function DataControl() {
             >
               {/* Graphic Area */}
               <div className="w-full aspect-[16/9] rounded-xl border border-border/60 bg-white shadow-[0_2px_10px_rgba(0,0,0,0.02)] relative overflow-hidden flex items-center justify-center mb-10">
-                {/* Concentric Circles */}
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.15]">
-                  <div className="w-[120%] aspect-square rounded-full border-[2px] border-[#c98a5e] absolute"></div>
-                  <div className="w-[85%] aspect-square rounded-full border-[2px] border-[#c98a5e] absolute"></div>
-                  <div className="w-[50%] aspect-square rounded-full border-[2px] border-[#c98a5e] absolute"></div>
-                </div>
-
-                {/* Icon in Center */}
-                <div className="relative z-10 w-11 h-11 flex items-center justify-center bg-gradient-to-b from-[#ca7e58] to-[#b35d32] rounded-[6px] shadow-[0_4px_12px_rgba(201,138,94,0.4)] text-white">
-                  <p.icon className="w-5 h-5" />
-                  {i === 2 && (
-                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                      <div className="w-[1.5px] h-7 bg-white/90 rotate-45 rounded-full"></div>
-                    </div>
-                  )}
-                </div>
+                <img
+                  src={i === 0 ? "/dataprotection1.png" : i === 1 ? "/dataprotection2.png" : "/dataprotection3.png"}
+                  alt={p.title}
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               <h3 className="text-[17px] font-medium tracking-tight text-foreground">{p.title}</h3>
